@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>ZeroClaw vs OpenClaw — RAM, Startup, Binary Size, Cost | AI Assistant Comparison</title>
+  <meta name="description" content="ZeroClaw vs OpenClaw: Rust vs TypeScript. ZeroClaw uses &lt;5MB RAM and &lt;10ms startup; OpenClaw &gt;1GB RAM and &gt;500s. When to choose each for edge vs desktop AI agents." />
+  <meta name="keywords" content="ZeroClaw vs OpenClaw, ZeroClaw OpenClaw comparison, Rust vs TypeScript AI, autonomous agent framework, edge AI, lightweight AI assistant" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://zeroclaw.dev/compare/zeroclaw-vs-openclaw.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="ZeroClaw vs OpenClaw — RAM, Startup, Binary Size, Cost" />
+  <meta property="og:description" content="ZeroClaw vs OpenClaw: Rust vs TypeScript. ZeroClaw &lt;5MB RAM, &lt;10ms startup; OpenClaw &gt;1GB RAM, &gt;500s. When to choose each." />
+  <meta property="og:url" content="https://zeroclaw.dev/compare/zeroclaw-vs-openclaw.html" />
+  <meta property="og:image" content="https://zeroclaw.dev/assets/zeroclaw_meta.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ZeroClaw vs OpenClaw — AI Assistant Comparison" />
+  <meta name="twitter:description" content="ZeroClaw vs OpenClaw: Rust vs TypeScript. &lt;5MB vs &gt;1GB RAM, &lt;10ms vs &gt;500s startup." />
+  <meta name="theme-color" content="#0a0e14" />
+  <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="stylesheet" href="../styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ZeroClaw vs OpenClaw — RAM, Startup, Binary Size, Cost",
+    "description": "ZeroClaw vs OpenClaw: Rust vs TypeScript. ZeroClaw uses less than 5MB RAM and under 10ms startup; OpenClaw requires over 1GB RAM and over 500 seconds startup. When to choose each for edge vs desktop AI agents.",
+    "url": "https://zeroclaw.dev/compare/zeroclaw-vs-openclaw.html",
+    "datePublished": "2025-02-18",
+    "dateModified": "2025-02-18"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What is the main difference between ZeroClaw and OpenClaw?", "acceptedAnswer": {"@type": "Answer", "text": "ZeroClaw is written in Rust and uses under 5MB RAM with under 10ms startup time. OpenClaw is written in TypeScript and requires over 1GB RAM with over 500 seconds startup on 0.8GHz edge hardware. ZeroClaw targets edge and embedded; OpenClaw targets desktop and server."}},
+      {"@type": "Question", "name": "Which is faster: ZeroClaw or OpenClaw?", "acceptedAnswer": {"@type": "Answer", "text": "ZeroClaw is significantly faster. ZeroClaw starts in under 10 milliseconds; OpenClaw takes over 500 seconds on the same 0.8GHz hardware. ZeroClaw also uses under 5MB RAM versus OpenClaw's over 1GB."}},
+      {"@type": "Question", "name": "When should I choose OpenClaw over ZeroClaw?", "acceptedAnswer": {"@type": "Answer", "text": "Choose OpenClaw if you need a TypeScript/Node.js ecosystem, run on a Mac Mini or similar desktop hardware with ample RAM, and prefer JavaScript tooling. Choose ZeroClaw for edge, IoT, Raspberry Pi, or resource-constrained environments."}},
+      {"@type": "Question", "name": "What is the binary size of ZeroClaw vs OpenClaw?", "acceptedAnswer": {"@type": "Answer", "text": "ZeroClaw produces a roughly 3.4MB binary. OpenClaw is around 28MB. ZeroClaw is about 8x smaller."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="wrap header-wrap">
+      <a href="../index.html" class="logo" aria-label="ZeroClaw home">
+        <img src="../assets/zeroclaw_icon.png" width="48" height="48" alt="ZeroClaw" class="logo-img" />
+      </a>
+      <nav id="main-nav" class="nav" aria-label="Main navigation">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../index.html#features" class="nav-link">Features</a>
+        <a href="../index.html#benchmark" class="nav-link">Benchmark</a>
+        <a href="index.html" class="nav-link">Compare</a>
+        <a href="../index.html#get-started" class="nav-link">Get started</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/zeroclaw-labs/zeroclaw" class="btn btn-gh" rel="noopener noreferrer" target="_blank">GitHub</a>
+        <a href="https://x.com/zeroclawlabs" class="btn btn-outline btn-icon-x" rel="noopener noreferrer" target="_blank" aria-label="Follow on X (Twitter)"><svg class="icon-x" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      </div>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span class="nav-toggle-bar"></span></button>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <article class="wrap" style="padding-top: 2rem; padding-bottom: 4rem; max-width: 52rem;">
+      <header>
+        <h1>ZeroClaw vs OpenClaw</h1>
+        <p class="ideas-hero-desc" style="margin-top: 0.5rem;">ZeroClaw (Rust) and OpenClaw (TypeScript) are both AI assistant frameworks. ZeroClaw uses under 5MB RAM and under 10ms startup; OpenClaw requires over 1GB RAM and over 500 seconds startup on 0.8GHz edge hardware. ZeroClaw targets edge and embedded; OpenClaw targets desktop and server.</p>
+      </header>
+
+      <section style="margin-top: 2rem;">
+        <h2>Comparison table</h2>
+        <div class="table-wrap" style="margin-top: 1rem;">
+          <table class="benchmark-table" aria-label="ZeroClaw vs OpenClaw metrics">
+            <thead>
+              <tr><th></th><th>OpenClaw</th><th>ZeroClaw</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Language</strong></td><td>TypeScript</td><td><strong>Rust</strong></td></tr>
+              <tr><td><strong>RAM</strong></td><td>&gt;1GB</td><td><strong>&lt;5MB</strong></td></tr>
+              <tr><td><strong>Startup (0.8GHz)</strong></td><td>&gt;500s</td><td><strong>&lt;10ms</strong></td></tr>
+              <tr><td><strong>Binary size</strong></td><td>~28MB</td><td><strong>~3.4MB</strong></td></tr>
+              <tr><td><strong>Typical hardware cost</strong></td><td>Mac Mini $599</td><td><strong>Any $10+</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section style="margin-top: 2rem;">
+        <h2>When to choose ZeroClaw</h2>
+        <ul class="contribute-list" style="list-style: disc; padding-left: 1.5rem;">
+          <li>Edge, IoT, Raspberry Pi, or resource-constrained devices</li>
+          <li>Sub-second cold start and minimal RAM footprint matter</li>
+          <li>You want a single small binary, no Node.js runtime</li>
+          <li>Memory safety and deterministic behavior are priorities</li>
+        </ul>
+      </section>
+
+      <section style="margin-top: 2rem;">
+        <h2>When to choose OpenClaw</h2>
+        <ul class="contribute-list" style="list-style: disc; padding-left: 1.5rem;">
+          <li>Desktop or server with ample RAM (Mac Mini, workstation)</li>
+          <li>TypeScript/Node.js ecosystem and tooling are required</li>
+          <li>Startup time and binary size are not critical</li>
+        </ul>
+      </section>
+
+      <section style="margin-top: 2rem;">
+        <h2>Frequently asked questions</h2>
+        <dl style="margin-top: 1rem;">
+          <dt><strong>What is the main difference between ZeroClaw and OpenClaw?</strong></dt>
+          <dd style="margin-bottom: 1rem;">ZeroClaw is written in Rust and uses under 5MB RAM with under 10ms startup time. OpenClaw is written in TypeScript and requires over 1GB RAM with over 500 seconds startup on 0.8GHz edge hardware. ZeroClaw targets edge and embedded; OpenClaw targets desktop and server.</dd>
+
+          <dt><strong>Which is faster: ZeroClaw or OpenClaw?</strong></dt>
+          <dd style="margin-bottom: 1rem;">ZeroClaw is significantly faster. ZeroClaw starts in under 10 milliseconds; OpenClaw takes over 500 seconds on the same 0.8GHz hardware. ZeroClaw also uses under 5MB RAM versus OpenClaw's over 1GB.</dd>
+
+          <dt><strong>When should I choose OpenClaw over ZeroClaw?</strong></dt>
+          <dd style="margin-bottom: 1rem;">Choose OpenClaw if you need a TypeScript/Node.js ecosystem, run on a Mac Mini or similar desktop hardware with ample RAM, and prefer JavaScript tooling. Choose ZeroClaw for edge, IoT, Raspberry Pi, or resource-constrained environments.</dd>
+
+          <dt><strong>What is the binary size of ZeroClaw vs OpenClaw?</strong></dt>
+          <dd>ZeroClaw produces a roughly 3.4MB binary. OpenClaw is around 28MB. ZeroClaw is about 8x smaller.</dd>
+        </dl>
+      </section>
+
+      <p style="margin-top: 2rem;"><a href="index.html">← Back to all comparisons</a></p>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <p class="footer-legal">ZeroClaw — Zero overhead. Zero compromise. Deploy anywhere. Swap anything. 🦀</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){var t=document.querySelector('.nav-toggle'),n=document.getElementById('main-nav');t&&n&&t.addEventListener('click',function(){var e=t.getAttribute('aria-expanded')==='true';t.setAttribute('aria-expanded',!e);n.classList.toggle('nav-open',!e);});})();
+  </script>
+</body>
+</html>

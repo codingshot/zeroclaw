@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>ZeroClaw vs PicoClaw — Rust vs Go, RAM, Startup, Binary Size | AI Agent Comparison</title>
+  <meta name="description" content="ZeroClaw vs PicoClaw: Rust vs Go. ZeroClaw uses &lt;5MB RAM, &lt;10ms startup, ~3.4MB binary; PicoClaw &lt;10MB RAM, &lt;1s startup, ~8MB. When to choose each for ultra-light AI runtimes." />
+  <meta name="keywords" content="ZeroClaw vs PicoClaw, ZeroClaw PicoClaw comparison, Rust vs Go AI, ultra-light AI agent, embedded AI, board AI assistant" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://zeroclaw.dev/compare/zeroclaw-vs-picoclaw.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="ZeroClaw vs PicoClaw — Rust vs Go, RAM, Startup, Binary Size" />
+  <meta property="og:description" content="ZeroClaw vs PicoClaw: Rust vs Go. ZeroClaw &lt;5MB RAM, &lt;10ms startup, 3.4MB; PicoClaw &lt;10MB RAM, &lt;1s, 8MB. When to choose each." />
+  <meta property="og:url" content="https://zeroclaw.dev/compare/zeroclaw-vs-picoclaw.html" />
+  <meta property="og:image" content="https://zeroclaw.dev/assets/zeroclaw_meta.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ZeroClaw vs PicoClaw — AI Agent Comparison" />
+  <meta name="twitter:description" content="ZeroClaw vs PicoClaw: Rust vs Go. &lt;5MB vs &lt;10MB RAM, &lt;10ms vs &lt;1s startup, 3.4MB vs 8MB binary." />
+  <meta name="theme-color" content="#0a0e14" />
+  <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="stylesheet" href="../styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ZeroClaw vs PicoClaw — Rust vs Go, RAM, Startup, Binary Size",
+    "description": "ZeroClaw vs PicoClaw: Rust vs Go. ZeroClaw uses under 5MB RAM, under 10ms startup, and a ~3.4MB binary; PicoClaw uses under 10MB RAM, under 1 second startup, and ~8MB binary. When to choose each for ultra-light AI runtimes.",
+    "url": "https://zeroclaw.dev/compare/zeroclaw-vs-picoclaw.html",
+    "datePublished": "2025-02-18",
+    "dateModified": "2025-02-18"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What is the main difference between ZeroClaw and PicoClaw?", "acceptedAnswer": {"@type": "Answer", "text": "ZeroClaw is written in Rust; PicoClaw in Go. ZeroClaw uses under 5MB RAM and under 10ms startup with a ~3.4MB binary. PicoClaw uses under 10MB RAM and under 1 second startup with ~8MB binary. Both target ultra-light runtimes; ZeroClaw is smaller and faster."}},
+      {"@type": "Question", "name": "Which has a smaller binary: ZeroClaw or PicoClaw?", "acceptedAnswer": {"@type": "Answer", "text": "ZeroClaw has a smaller binary: ~3.4MB versus PicoClaw's ~8MB. ZeroClaw is about 2.3x smaller."}},
+      {"@type": "Question", "name": "When should I choose PicoClaw over ZeroClaw?", "acceptedAnswer": {"@type": "Answer", "text": "Choose PicoClaw if you need Go tooling, prefer Go development, and sub-second startup with under 10MB RAM is sufficient. Choose ZeroClaw for the smallest footprint, sub-10ms startup, and maximum efficiency on $10+ boards."}},
+      {"@type": "Question", "name": "Can both ZeroClaw and PicoClaw run on $10 boards?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Both target low-cost hardware. ZeroClaw runs on any $10+ board with under 5MB RAM and under 10ms startup. PicoClaw runs on $10 boards with under 10MB RAM and under 1 second startup. ZeroClaw offers tighter resource use."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="wrap header-wrap">
+      <a href="../index.html" class="logo" aria-label="ZeroClaw home">
+        <img src="../assets/zeroclaw_icon.png" width="48" height="48" alt="ZeroClaw" class="logo-img" />
+      </a>
+      <nav id="main-nav" class="nav" aria-label="Main navigation">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../index.html#features" class="nav-link">Features</a>
+        <a href="../index.html#benchmark" class="nav-link">Benchmark</a>
+        <a href="index.html" class="nav-link">Compare</a>
+        <a href="../index.html#get-started" class="nav-link">Get started</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/zeroclaw-labs/zeroclaw" class="btn btn-gh" rel="noopener noreferrer" target="_blank">GitHub</a>
+        <a href="https://x.com/zeroclawlabs" class="btn btn-outline btn-icon-x" rel="noopener noreferrer" target="_blank" aria-label="Follow on X (Twitter)"><svg class="icon-x" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      </div>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span class="nav-toggle-bar"></span></button>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <article class="wrap" style="padding-top: 2rem; padding-bottom: 4rem; max-width: 52rem;">
+      <header>
+        <h1>ZeroClaw vs PicoClaw</h1>
+        <p class="ideas-hero-desc" style="margin-top: 0.5rem;">ZeroClaw (Rust) and PicoClaw (Go) are both ultra-light AI agent runtimes. ZeroClaw uses under 5MB RAM, under 10ms startup, and a ~3.4MB binary; PicoClaw uses under 10MB RAM, under 1 second startup, and ~8MB binary. ZeroClaw offers the smallest footprint and fastest cold start.</p>
+      </header>
+
+      <section style="margin-top: 2rem;">
+        <h2>Comparison table</h2>
+        <div class="table-wrap" style="margin-top: 1rem;">
+          <table class="benchmark-table" aria-label="ZeroClaw vs PicoClaw metrics">
+            <thead>
+              <tr><th></th><th>PicoClaw</th><th>ZeroClaw</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Language</strong></td><td>Go</td><td><strong>Rust</strong></td></tr>
+              <tr><td><strong>RAM</strong></td><td>&lt;10MB</td><td><strong>&lt;5MB</strong></td></tr>
+              <tr><td><strong>Startup (0.8GHz)</strong></td><td>&lt;1s</td><td><strong>&lt;10ms</strong></td></tr>
+              <tr><td><strong>Binary size</strong></td><td>~8MB</td><td><strong>~3.4MB</strong></td></tr>
+              <tr><td><strong>Typical hardware cost</strong></td><td>Board $10</td><td><strong>Any $10+</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section style="margin-top: 2rem;">
+        <h2>When to choose ZeroClaw</h2>
+        <ul class="contribute-list" style="list-style: disc; padding-left: 1.5rem;">
+          <li>Smallest binary (~3.4MB) and lowest RAM (&lt;5MB)</li>
+          <li>Sub-10ms cold start for edge and embedded</li>
+          <li>Memory safety and deterministic behavior (Rust)</li>
+          <li>Maximum efficiency on $10+ boards</li>
+        </ul>
+      </section>
+
+      <section style="margin-top: 2rem;">
+        <h2>When to choose PicoClaw</h2>
+        <ul class="contribute-list" style="list-style: disc; padding-left: 1.5rem;">
+          <li>Go ecosystem and tooling are required</li>
+          <li>Sub-second startup with under 10MB RAM is sufficient</li>
+          <li>Go-first development workflow</li>
+        </ul>
+      </section>
+
+      <section style="margin-top: 2rem;">
+        <h2>Frequently asked questions</h2>
+        <dl style="margin-top: 1rem;">
+          <dt><strong>What is the main difference between ZeroClaw and PicoClaw?</strong></dt>
+          <dd style="margin-bottom: 1rem;">ZeroClaw is written in Rust; PicoClaw in Go. ZeroClaw uses under 5MB RAM and under 10ms startup with a ~3.4MB binary. PicoClaw uses under 10MB RAM and under 1 second startup with ~8MB binary. Both target ultra-light runtimes; ZeroClaw is smaller and faster.</dd>
+
+          <dt><strong>Which has a smaller binary: ZeroClaw or PicoClaw?</strong></dt>
+          <dd style="margin-bottom: 1rem;">ZeroClaw has a smaller binary: ~3.4MB versus PicoClaw's ~8MB. ZeroClaw is about 2.3x smaller.</dd>
+
+          <dt><strong>When should I choose PicoClaw over ZeroClaw?</strong></dt>
+          <dd style="margin-bottom: 1rem;">Choose PicoClaw if you need Go tooling, prefer Go development, and sub-second startup with under 10MB RAM is sufficient. Choose ZeroClaw for the smallest footprint, sub-10ms startup, and maximum efficiency on $10+ boards.</dd>
+
+          <dt><strong>Can both ZeroClaw and PicoClaw run on $10 boards?</strong></dt>
+          <dd>Yes. Both target low-cost hardware. ZeroClaw runs on any $10+ board with under 5MB RAM and under 10ms startup. PicoClaw runs on $10 boards with under 10MB RAM and under 1 second startup. ZeroClaw offers tighter resource use.</dd>
+        </dl>
+      </section>
+
+      <p style="margin-top: 2rem;"><a href="index.html">← Back to all comparisons</a></p>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <p class="footer-legal">ZeroClaw — Zero overhead. Zero compromise. Deploy anywhere. Swap anything. 🦀</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){var t=document.querySelector('.nav-toggle'),n=document.getElementById('main-nav');t&&n&&t.addEventListener('click',function(){var e=t.getAttribute('aria-expanded')==='true';t.setAttribute('aria-expanded',!e);n.classList.toggle('nav-open',!e);});})();
+  </script>
+</body>
+</html>
