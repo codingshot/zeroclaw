@@ -214,17 +214,18 @@
           updateUrl({ q: q, category: catVal }, true);
         }
 
-        if (clearBtn) {
-          clearBtn.addEventListener('click', function () {
-            if (searchInput) searchInput.value = '';
-            if (categorySelect) categorySelect.value = '';
-            if (pillsContainer) pillsContainer.querySelectorAll('.idea-pill').forEach(function (p) {
-              p.classList.toggle('idea-pill-active', p.getAttribute('data-category') === '');
-            });
-            updateUrl({}, true);
-            applyFilter();
+        function clearFilters() {
+          if (searchInput) searchInput.value = '';
+          if (categorySelect) categorySelect.value = '';
+          if (pillsContainer) pillsContainer.querySelectorAll('.idea-pill').forEach(function (p) {
+            p.classList.toggle('idea-pill-active', p.getAttribute('data-category') === '');
           });
+          updateUrl({}, true);
+          applyFilter();
         }
+        if (clearBtn) clearBtn.addEventListener('click', clearFilters);
+        var emptyClearBtn = byId('ideas-empty') && byId('ideas-empty').querySelector('.ideas-empty-clear');
+        if (emptyClearBtn) emptyClearBtn.addEventListener('click', clearFilters);
 
         if (searchInput) {
           searchInput.addEventListener('input', applyFilter);
