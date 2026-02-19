@@ -50,13 +50,15 @@
       <nav id="main-nav" class="nav" aria-label="Main navigation">
         <a href="#features" class="nav-link">Features</a>
         <a href="#quick-start" class="nav-link">Quick start</a>
+        <a href="#learn" class="nav-link">Learn</a>
         <a href="#use-cases" class="nav-link">Use cases</a>
-        <a href="#ideas" class="nav-link">Ideas</a>
+        <a href="ideas.html" class="nav-link">Ideas</a>
+        <a href="ecosystem.html" class="nav-link">Ecosystem</a>
         <a href="#get-started" class="nav-link">Get started</a>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/zeroclaw-labs/zeroclaw" class="btn btn-gh" rel="noopener noreferrer" target="_blank">GitHub</a>
-        <a href="https://x.com/zeroclawlabs" class="btn btn-outline" rel="noopener noreferrer" target="_blank" aria-label="Follow on X (Twitter)">X</a>
+        <a href="https://x.com/zeroclawlabs" class="btn btn-outline btn-icon-x" rel="noopener noreferrer" target="_blank" aria-label="Follow on X (Twitter)"><svg class="icon-x" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
       </div>
     </div>
   </header>
@@ -64,7 +66,7 @@
   <main id="main" role="main">
     <section class="hero">
       <div class="wrap">
-        <img src="assets/zeroclaw_icon.png" width="180" height="180" alt="" class="hero-logo" fetchpriority="high" />
+        <img src="assets/logo.png" width="280" height="94" alt="" class="hero-logo" fetchpriority="high" />
         <p class="hero-badge">🚀 AI-Powered Assistant Infrastructure in Rust</p>
         <h1>Zero overhead. Zero compromise.</h1>
         <p class="hero-tagline">ZeroClaw is a next-generation AI assistant framework written in Rust. Ultra-lightweight, blazing fast, memory-safe, built for production.</p>
@@ -87,6 +89,34 @@
       </div>
     </section>
 
+    <section id="learn" class="learn">
+      <div class="wrap">
+        <h2>Learn</h2>
+        <p class="learn-intro">Watch intro and tutorial videos.</p>
+        <div class="learn-carousel-wrap">
+          <button type="button" class="learn-carousel-btn learn-carousel-prev" aria-label="Previous video"><span aria-hidden="true">&#9664;</span></button>
+          <div class="learn-carousel" role="region" aria-label="YouTube videos">
+            <div class="learn-carousel-track">
+              <div class="learn-carousel-slide">
+                <iframe src="https://www.youtube.com/embed/8zuIJWGp2ko" title="ZeroClaw video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="learn-carousel-slide">
+                <iframe src="https://www.youtube.com/embed/G2kT7L7R96k?start=121" title="ZeroClaw video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="learn-carousel-slide">
+                <iframe src="https://www.youtube.com/embed/YdkVlRVytTY" title="ZeroClaw video 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="learn-carousel-slide">
+                <iframe src="https://www.youtube.com/embed/khzEm0tOpgs" title="ZeroClaw video 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="learn-carousel-btn learn-carousel-next" aria-label="Next video"><span aria-hidden="true">&#9654;</span></button>
+        </div>
+        <div class="learn-carousel-dots" aria-hidden="true"></div>
+      </div>
+    </section>
+
     <section id="star-repo" class="star-cta">
       <div class="wrap">
         <h2>Support ZeroClaw</h2>
@@ -102,12 +132,12 @@
         <h2>Why choose ZeroClaw?</h2>
         <p class="features-sub">Lightweight infrastructure designed for modern AI applications.</p>
         <ul class="why-grid">
-          <li><span class="why-icon" aria-hidden="true">⚡</span><strong>Blazing fast</strong> — Cold startup &lt;10ms, instant response.</li>
-          <li><span class="why-icon" aria-hidden="true">📦</span><strong>Ultra lightweight</strong> — Binary only 3.4MB, minimal resource usage.</li>
-          <li><span class="why-icon" aria-hidden="true">🔌</span><strong>Pluggable architecture</strong> — Flexible component extension based on Rust trait system.</li>
-          <li><span class="why-icon" aria-hidden="true">🔒</span><strong>Memory safe</strong> — Guaranteed by Rust, no data races, no memory leaks.</li>
-          <li><span class="why-icon" aria-hidden="true">🌐</span><strong>Multi-platform</strong> — 22+ AI providers, Telegram, Discord, Slack and more.</li>
-          <li><span class="why-icon" aria-hidden="true">🚀</span><strong>Zero overhead</strong> — Zero runtime overhead, uncompromised performance.</li>
+          <li><span class="why-icon" aria-hidden="true">⚡</span><div class="why-card-text"><span class="why-title">Blazing fast</span><span class="why-desc">Cold startup &lt;10ms, instant response.</span></div></li>
+          <li><span class="why-icon" aria-hidden="true">📦</span><div class="why-card-text"><span class="why-title">Ultra lightweight</span><span class="why-desc">Binary only 3.4MB, minimal resource usage.</span></div></li>
+          <li><span class="why-icon" aria-hidden="true">🔌</span><div class="why-card-text"><span class="why-title">Pluggable architecture</span><span class="why-desc">Flexible component extension based on Rust trait system.</span></div></li>
+          <li><span class="why-icon" aria-hidden="true">🔒</span><div class="why-card-text"><span class="why-title">Memory safe</span><span class="why-desc">Guaranteed by Rust, no data races, no memory leaks.</span></div></li>
+          <li><span class="why-icon" aria-hidden="true">🌐</span><div class="why-card-text"><span class="why-title">Multi-platform</span><span class="why-desc">22+ AI providers, Telegram, Discord, Slack and more.</span></div></li>
+          <li><span class="why-icon" aria-hidden="true">🚀</span><div class="why-card-text"><span class="why-title">Zero overhead</span><span class="why-desc">Zero runtime overhead, uncompromised performance.</span></div></li>
         </ul>
         <p class="features-why"><strong>Teams also get:</strong> Secure by design (pairing, sandboxing, allowlists) · Fully swappable traits · No lock-in (OpenAI-compatible + custom endpoints).</p>
       </div>
@@ -213,16 +243,49 @@ zeroclaw daemon   # gateway + channels (Telegram, Discord, Slack…)</code></pre
       <div class="wrap">
         <h2>Broad support</h2>
         <p class="support-intro">Seamless integration with mainstream AI providers and communication platforms.</p>
+        <p class="support-label">AI providers</p>
         <div class="support-pills">
-          <span class="pill">OpenAI</span>
+          <span class="pill">OpenRouter</span>
           <span class="pill">Anthropic</span>
-          <span class="pill">Claude</span>
-          <span class="pill">Gemini</span>
-          <span class="pill">Mistral</span>
+          <span class="pill">OpenAI</span>
           <span class="pill">Ollama</span>
+          <span class="pill">Gemini</span>
+          <span class="pill">Venice</span>
+          <span class="pill">Vercel</span>
+          <span class="pill">Cloudflare</span>
+          <span class="pill">Moonshot</span>
+          <span class="pill">Kimi Code</span>
+          <span class="pill">Synthetic</span>
+          <span class="pill">OpenCode</span>
+          <span class="pill">Z.ai</span>
+          <span class="pill">GLM</span>
+          <span class="pill">MiniMax</span>
+          <span class="pill">Bedrock</span>
+          <span class="pill">Qianfan</span>
+          <span class="pill">Qwen</span>
+          <span class="pill">Groq</span>
+          <span class="pill">Mistral</span>
+          <span class="pill">xAI</span>
+          <span class="pill">DeepSeek</span>
+          <span class="pill">Together</span>
+          <span class="pill">Fireworks</span>
+          <span class="pill">Perplexity</span>
+          <span class="pill">Cohere</span>
+          <span class="pill">Copilot</span>
+          <span class="pill">LM Studio</span>
+          <span class="pill">NVIDIA</span>
+        </div>
+        <p class="support-label">Channels</p>
+        <div class="support-pills">
+          <span class="pill">CLI</span>
           <span class="pill">Telegram</span>
           <span class="pill">Discord</span>
           <span class="pill">Slack</span>
+          <span class="pill">Matrix</span>
+          <span class="pill">Signal</span>
+          <span class="pill">WhatsApp</span>
+          <span class="pill">Email</span>
+          <span class="pill">Webhook</span>
         </div>
       </div>
     </section>
@@ -244,14 +307,14 @@ zeroclaw daemon   # gateway + channels (Telegram, Discord, Slack…)</code></pre
     <section id="use-cases" class="use-cases">
       <div class="wrap">
         <h2>Use cases</h2>
-        <ul class="use-case-list">
-          <li><strong>IoT & robots</strong> — Drones, rovers, fleet dispatch; companion PC or gateway; local or cloud models.</li>
-          <li><strong>Legal & compliance</strong> — Legal aid bots, court clerk assistant, RAG over corpus, audit trails.</li>
-          <li><strong>SaaS & API</strong> — API-first assistant, white-label bot, managed run-your-own, multi-tenant.</li>
-          <li><strong>Ops & SRE</strong> — Incident runbook agent, Slack/Teams, approved scripts, audit.</li>
-          <li><strong>Education & maker</strong> — Classroom lab in a box, RPi + Arduino; chat to control hardware.</li>
-          <li><strong>Edge & air-gap</strong> — Local models (Ollama, LM Studio); offline queue; burners and field devices.</li>
-        </ul>
+        <div class="use-case-grid">
+          <div class="use-case-card"><span class="use-case-title">IoT & robots</span><span class="use-case-desc">Drones, rovers, fleet dispatch; companion PC or gateway; local or cloud models.</span></div>
+          <div class="use-case-card"><span class="use-case-title">Legal & compliance</span><span class="use-case-desc">Legal aid bots, court clerk assistant, RAG over corpus, audit trails.</span></div>
+          <div class="use-case-card"><span class="use-case-title">SaaS & API</span><span class="use-case-desc">API-first assistant, white-label bot, managed run-your-own, multi-tenant.</span></div>
+          <div class="use-case-card"><span class="use-case-title">Ops & SRE</span><span class="use-case-desc">Incident runbook agent, Slack/Teams, approved scripts, audit.</span></div>
+          <div class="use-case-card"><span class="use-case-title">Education & maker</span><span class="use-case-desc">Classroom lab in a box, RPi + Arduino; chat to control hardware.</span></div>
+          <div class="use-case-card"><span class="use-case-title">Edge & air-gap</span><span class="use-case-desc">Local models (Ollama, LM Studio); offline queue; burners and field devices.</span></div>
+        </div>
       </div>
     </section>
 
@@ -338,7 +401,8 @@ zeroclaw daemon   # gateway + channels (Telegram, Discord, Slack…)</code></pre
           <h3 class="footer-heading">Community</h3>
           <ul class="footer-list">
             <li><a href="https://github.com/zeroclaw-labs/zeroclaw" rel="noopener noreferrer" target="_blank">GitHub</a></li>
-            <li><a href="https://x.com/zeroclawlabs" rel="noopener noreferrer" target="_blank">X (Twitter)</a></li>
+            <li><a href="ecosystem.html" rel="noopener noreferrer">Ecosystem</a></li>
+            <li><a href="https://x.com/zeroclawlabs" rel="noopener noreferrer" target="_blank" aria-label="X (Twitter)"><svg class="icon-x icon-x-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
             <li><a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/CONTRIBUTING.md" rel="noopener noreferrer" target="_blank">Contribute</a></li>
             <li><a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/SECURITY.md" rel="noopener noreferrer" target="_blank">Security</a></li>
           </ul>
@@ -356,12 +420,44 @@ zeroclaw daemon   # gateway + channels (Telegram, Discord, Slack…)</code></pre
       <div class="footer-cta">
         <a href="https://github.com/zeroclaw-labs/zeroclaw" class="btn btn-star" rel="noopener noreferrer" target="_blank"><span class="btn-star-icon" aria-hidden="true">★</span> Star on GitHub<span class="star-count" data-star-count aria-hidden="true"></span></a>
       </div>
-      <p class="footer-by">First built by <span class="author-wrap"><a href="https://www.linkedin.com/in/argenisdelarosa/" class="author-name" rel="noopener noreferrer" target="_blank">Argenis</a><span class="author-links"><a href="https://x.com/argenistherose" rel="noopener noreferrer" target="_blank" aria-label="Argenis on X">X</a><a href="https://www.linkedin.com/in/argenisdelarosa/" rel="noopener noreferrer" target="_blank" aria-label="Argenis on LinkedIn">LinkedIn</a><a href="https://github.com/theonlyhennygod" rel="noopener noreferrer" target="_blank" aria-label="Argenis on GitHub">GitHub</a><a href="https://www.argenis.xyz/" rel="noopener noreferrer" target="_blank" aria-label="Argenis&#39;s website">Website</a></span></span>. Built with the Harvard, MIT, and Sundai.Club communities.</p>
+      <p class="footer-by">First built by <span class="author-wrap"><a href="https://www.linkedin.com/in/argenisdelarosa/" class="author-name" rel="noopener noreferrer" target="_blank">Argenis</a><span class="author-links"><a href="https://x.com/argenistherose" rel="noopener noreferrer" target="_blank" aria-label="Argenis on X"><svg class="icon-x icon-x-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="https://www.linkedin.com/in/argenisdelarosa/" rel="noopener noreferrer" target="_blank" aria-label="Argenis on LinkedIn">LinkedIn</a><a href="https://github.com/theonlyhennygod" rel="noopener noreferrer" target="_blank" aria-label="Argenis on GitHub">GitHub</a><a href="https://www.argenis.xyz/" rel="noopener noreferrer" target="_blank" aria-label="Argenis&#39;s website">Website</a></span></span>. Built with the Harvard, MIT, and Sundai.Club communities.</p>
       <p class="footer-legal">ZeroClaw — Zero overhead. Zero compromise. Deploy anywhere. Swap anything. 🦀</p>
     </div>
   </footer>
 
   <script src="main.js" defer></script>
+  <script>
+    (function() {
+      var track = document.querySelector('.learn-carousel-track');
+      var slides = document.querySelectorAll('.learn-carousel-slide');
+      var dotsEl = document.querySelector('.learn-carousel-dots');
+      var prevBtn = document.querySelector('.learn-carousel-prev');
+      var nextBtn = document.querySelector('.learn-carousel-next');
+      var total = slides.length;
+      var idx = 0;
+      if (total && track && dotsEl) {
+        for (var i = 0; i < total; i++) {
+          var dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'learn-carousel-dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Go to video ' + (i + 1));
+          dot.addEventListener('click', function() {
+            var j = Array.prototype.indexOf.call(dotsEl.querySelectorAll('.learn-carousel-dot'), this);
+            if (j !== -1) { idx = j; update(); }
+          });
+          dotsEl.appendChild(dot);
+        }
+        function update() {
+          if (idx < 0) idx = total - 1;
+          if (idx >= total) idx = 0;
+          track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+          dotsEl.querySelectorAll('.learn-carousel-dot').forEach(function(d, i) { d.classList.toggle('active', i === idx); });
+        }
+        if (prevBtn) prevBtn.addEventListener('click', function() { idx--; update(); });
+        if (nextBtn) nextBtn.addEventListener('click', function() { idx++; update(); });
+      }
+    })();
+  </script>
   <script>
     (function() {
       var t = document.querySelector('.nav-toggle');

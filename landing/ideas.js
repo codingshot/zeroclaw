@@ -5,9 +5,28 @@
 
   function byId(id) { return document.getElementById(id); }
 
-  function getQueryId() {
+  function getParams() {
     var params = new URLSearchParams(window.location.search);
-    return params.get('id') || '';
+    return {
+      id: params.get('id') || '',
+      q: params.get('q') || '',
+      category: params.get('category') || ''
+    };
+  }
+
+  function getQueryId() {
+    return getParams().id;
+  }
+
+  function updateUrl(params, replace) {
+    var qs = [];
+    if (params.id) qs.push('id=' + encodeURIComponent(params.id));
+    if (params.q) qs.push('q=' + encodeURIComponent(params.q));
+    if (params.category) qs.push('category=' + encodeURIComponent(params.category));
+    var search = qs.length ? '?' + qs.join('&') : '';
+    var url = window.location.pathname + search + window.location.hash;
+    var method = replace ? 'replaceState' : 'pushState';
+    window.history[method]({}, '', url);
   }
 
   function escapeHtml(s) {
@@ -33,10 +52,12 @@
   function renderSingle(idea, catLabel) {
     var singleEl = byId('ideas-single');
     if (!singleEl) return;
+    var catHref = 'ideas.html?category=' + encodeURIComponent(idea.category);
+    var catHtml = '<a href="' + escapeHtml(catHref) + '" class="idea-cat idea-cat-link">' + escapeHtml(catLabel) + '</a>';
     singleEl.innerHTML =
       '<a href="ideas.html" class="idea-back">&larr; All ideas</a>' +
       '<article class="idea-detail">' +
-      '<span class="idea-cat">' + escapeHtml(catLabel) + '</span>' +
+      catHtml +
       '<h2 class="idea-detail-title">' + escapeHtml(idea.title) + '</h2>' +
       '<p class="idea-detail-summary">' + escapeHtml(idea.summary) + '</p>' +
       (idea.link ? '<p><a href="' + escapeHtml(idea.link) + '" rel="noopener noreferrer" target="_blank">Related link</a></p>' : '') +
@@ -71,14 +92,23 @@
       li.className = 'idea-card idea-card-link';
       li.setAttribute('role', 'listitem');
       var catLabel = catMap[idea.category] || idea.category;
-      var href = 'ideas.html?id=' + encodeURIComponent(idea.id);
+      var ideaHref = 'ideas.html?id=' + encodeURIComponent(idea.id);
+      var catHref = 'ideas.html?category=' + encodeURIComponent(idea.category);
       li.innerHTML =
-        '<a href="' + escapeHtml(href) + '" class="idea-card-inner">' +
+        '<a href="' + escapeHtml(ideaHref) + '" class="idea-card-inner">' +
         '<span class="idea-title">' + escapeHtml(idea.title) + '</span>' +
         '<span class="idea-summary">' + escapeHtml(idea.summary) + '</span>' +
         '<span class="idea-read-more">View idea &rarr;</span>' +
-        '<span class="idea-cat-pill">' + escapeHtml(catLabel) + '</span>' +
+        '<span class="idea-cat-pill" role="link" tabindex="0" data-category-href="' + escapeHtml(catHref) + '">' + escapeHtml(catLabel) + '</span>' +
         '</a>';
+      var pill = li.querySelector('.idea-cat-pill');
+      if (pill) {
+        pill.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          window.location.href = pill.getAttribute('data-category-href');
+        });
+      }
       container.appendChild(li);
     });
   }
@@ -115,9 +145,11 @@
   }
 
   function run() {
-    var singleId = getQueryId();
+    var params = getParams();
+    var singleId = params.id;
     var categorySelect = byId('ideas-category');
     var searchInput = byId('ideas-search');
+    var clearBtn = byId('ideas-clear-filters');
 
     fetch(IDEAS_URL)
       .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error('Failed to load')); })
@@ -135,12 +167,16 @@
         });
 
         var pillsContainer = byId('ideas-category-pills');
-        renderCategoryPills(categories, '', pillsContainer, categorySelect);
+        var initialCategory = singleId ? '' : (params.category || '');
+        var initialQ = singleId ? '' : (params.q || '');
+        if (searchInput) searchInput.value = initialQ;
+        if (categorySelect) categorySelect.value = initialCategory;
+        renderCategoryPills(categories, initialCategory, pillsContainer, categorySelect);
+
         if (categorySelect) {
           categorySelect.addEventListener('change', function () {
-            var val = categorySelect.value;
             pillsContainer.querySelectorAll('.idea-pill').forEach(function (p) {
-              p.classList.toggle('idea-pill-active', p.getAttribute('data-category') === val);
+              p.classList.toggle('idea-pill-active', p.getAttribute('data-category') === categorySelect.value);
             });
             applyFilter();
           });
@@ -155,11 +191,12 @@
             document.title = escapeHtml(idea.title) + ' — Ideas | ZeroClaw';
           } else {
             setPageState(null);
-            renderBoard(ideas, categories, catMap);
+            applyFilter();
           }
         } else {
           setPageState(null);
-          renderBoard(ideas, categories, catMap);
+          applyFilter();
+          syncUrlFromFilters();
         }
 
         function applyFilter() {
@@ -167,6 +204,26 @@
           var q = searchInput ? searchInput.value : '';
           var filtered = filterIdeas(ideas, catVal, q);
           renderBoard(filtered, categories, catMap);
+          syncUrlFromFilters();
+        }
+
+        function syncUrlFromFilters() {
+          if (getParams().id) return;
+          var catVal = categorySelect ? categorySelect.value : '';
+          var q = searchInput ? searchInput.value.trim() : '';
+          updateUrl({ q: q, category: catVal }, true);
+        }
+
+        if (clearBtn) {
+          clearBtn.addEventListener('click', function () {
+            if (searchInput) searchInput.value = '';
+            if (categorySelect) categorySelect.value = '';
+            if (pillsContainer) pillsContainer.querySelectorAll('.idea-pill').forEach(function (p) {
+              p.classList.toggle('idea-pill-active', p.getAttribute('data-category') === '');
+            });
+            updateUrl({}, true);
+            applyFilter();
+          });
         }
 
         if (searchInput) {

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ecosystem — ZeroClaw | Projects, integrations, open source</title>
+  <meta name="description" content="ZeroClaw ecosystem: projects built with ZeroClaw, integrations, and open source. Search by name or filter by status (building or production)." />
+  <meta name="robots" content="index, follow, max-snippet:-1" />
+  <link rel="canonical" href="ecosystem.html" />
+  <meta property="og:title" content="Ecosystem — ZeroClaw" />
+  <meta property="og:description" content="Projects, integrations, and open source built with ZeroClaw. Add yours via PR." />
+  <meta property="og:url" content="https://zeroclaw.dev/ecosystem.html" />
+  <meta property="og:image" content="https://zeroclaw.dev/assets/zeroclaw_meta.png" />
+  <meta name="theme-color" content="#0a0e14" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="wrap header-wrap">
+      <a href="index.html" class="logo" aria-label="ZeroClaw home">
+        <img src="assets/zeroclaw_icon.png" width="48" height="48" alt="ZeroClaw" class="logo-img" />
+      </a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span class="nav-toggle-bar"></span></button>
+      <nav id="main-nav" class="nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#features" class="nav-link">Features</a>
+        <a href="index.html#learn" class="nav-link">Learn</a>
+        <a href="ideas.html" class="nav-link">Ideas</a>
+        <a href="ecosystem.html" class="nav-link">Ecosystem</a>
+        <a href="index.html#get-started" class="nav-link">Get started</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/zeroclaw-labs/zeroclaw" class="btn btn-gh" rel="noopener noreferrer" target="_blank">GitHub</a>
+        <a href="https://x.com/zeroclawlabs" class="btn btn-outline btn-icon-x" rel="noopener noreferrer" target="_blank" aria-label="X (Twitter)"><svg class="icon-x" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section class="ideas-hero ecosystem-hero">
+      <div class="wrap">
+        <h1 class="ideas-hero-title">Ecosystem</h1>
+        <p class="ideas-hero-desc">Projects, integrations, and open source built with ZeroClaw. Building or production.</p>
+      </div>
+    </section>
+    <div class="wrap ideas-page-wrap">
+      <div id="ecosystem-board" class="ideas-board">
+        <div class="ideas-toolbar">
+          <div class="ideas-search-wrap">
+            <label for="ecosystem-search" class="sr-only">Search ecosystem</label>
+            <input type="search" id="ecosystem-search" class="ideas-search" placeholder="Search…" aria-label="Search ecosystem" autocomplete="off" />
+          </div>
+          <div class="ideas-filters">
+            <span class="ideas-filters-label">Status</span>
+            <div id="ecosystem-status-pills" class="ideas-category-pills" role="group" aria-label="Filter by status">
+              <button type="button" class="idea-pill idea-pill-active" data-status="">All</button>
+              <button type="button" class="idea-pill" data-status="building">Building</button>
+              <button type="button" class="idea-pill" data-status="production">Production</button>
+            </div>
+            <button type="button" id="ecosystem-clear-filters" class="ideas-clear-btn" aria-label="Clear filters">Clear filters</button>
+          </div>
+        </div>
+        <p id="ecosystem-count" class="ideas-count" aria-live="polite"></p>
+        <div class="ideas-grid ideas-grid-full" id="ecosystem-container" role="list">
+          <!-- Filled by ecosystem.js -->
+        </div>
+        <div id="ecosystem-empty" class="ideas-empty-state">
+          <p class="ideas-empty-title">No projects yet</p>
+          <p class="ideas-empty-desc">The ecosystem list is empty. Add your project via a PR — see below.</p>
+        </div>
+      </div>
+
+      <section class="ecosystem-add-cta">
+        <h2>Add your project</h2>
+        <p>Built something with ZeroClaw? Open source and in building or production? Add it to the ecosystem.</p>
+        <ol class="ecosystem-add-steps">
+          <li>Fork the <a href="https://github.com/zeroclaw-labs/zeroclaw" rel="noopener noreferrer" target="_blank">zeroclaw-labs/zeroclaw</a> repo.</li>
+          <li>Edit <code>landing/ecosystem.json</code>: add an entry with <code>id</code>, <code>name</code>, <code>description</code>, <code>status</code> (<code>building</code> or <code>production</code>), and optional <code>link</code> or <code>repo</code>.</li>
+          <li>Open a pull request. We’ll review and merge.</li>
+        </ol>
+        <a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/landing/ecosystem.json" class="btn btn-outline" rel="noopener noreferrer" target="_blank">Edit ecosystem.json on GitHub</a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <p class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="https://github.com/zeroclaw-labs/zeroclaw" rel="noopener noreferrer" target="_blank">GitHub</a>
+        <a href="https://x.com/zeroclawlabs" rel="noopener noreferrer" target="_blank">X</a>
+      </p>
+      <p class="footer-by">First built by <span class="author-wrap"><a href="https://www.linkedin.com/in/argenisdelarosa/" class="author-name" rel="noopener noreferrer" target="_blank">Argenis</a><span class="author-links"><a href="https://x.com/argenistherose" rel="noopener noreferrer" target="_blank" aria-label="Argenis on X">X</a><a href="https://www.linkedin.com/in/argenisdelarosa/" rel="noopener noreferrer" target="_blank" aria-label="Argenis on LinkedIn">LinkedIn</a><a href="https://github.com/theonlyhennygod" rel="noopener noreferrer" target="_blank" aria-label="Argenis on GitHub">GitHub</a><a href="https://www.argenis.xyz/" rel="noopener noreferrer" target="_blank" aria-label="Argenis&#39;s website">Website</a></span></span>.</p>
+      <p class="footer-legal">ZeroClaw — Deploy anywhere. Swap anything. 🦀</p>
+    </div>
+  </footer>
+
+  <script src="ecosystem.js" defer></script>
+  <script>
+    (function() {
+      var t = document.querySelector('.nav-toggle');
+      var n = document.getElementById('main-nav');
+      function closeNav() {
+        if (t && n && t.getAttribute('aria-expanded') === 'true') {
+          t.setAttribute('aria-expanded', 'false');
+          t.setAttribute('aria-label', 'Open menu');
+          n.classList.remove('nav-open');
+        }
+      }
+      if (t && n) {
+        t.addEventListener('click', function() {
+          var open = t.getAttribute('aria-expanded') === 'true';
+          t.setAttribute('aria-expanded', !open);
+          t.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+          n.classList.toggle('nav-open', !open);
+        });
+        n.querySelectorAll('.nav-link').forEach(function(a) { a.addEventListener('click', closeNav); });
+      }
+    })();
+  </script>
+</body>
+</html>
