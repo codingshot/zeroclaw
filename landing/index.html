@@ -5,26 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ZeroClaw — Fast, small, autonomous AI assistant infrastructure | Deploy anywhere, swap anything</title>
   <meta name="description" content="ZeroClaw: AI-powered assistant infrastructure in Rust. Zero overhead, zero compromise. Ultra-lightweight (3.4MB), &lt;10ms startup, 22+ AI providers. Built for production." />
-  <meta name="keywords" content="ZeroClaw, AI assistant, Rust, autonomous agent, open source, IoT, chatbot, LLM, local AI, edge AI, Raspberry Pi, OpenAI, Anthropic, Telegram, Discord" />
+  <meta name="keywords" content="ZeroClaw, AI assistant, Rust, autonomous agent, open source, IoT, chatbot, LLM, local AI, edge AI, Raspberry Pi, OpenAI, Anthropic, Telegram, Discord, lightweight, 3.4MB, sub-10ms startup" />
   <meta name="author" content="Argenis De La Rosa, ZeroClaw Labs" />
-  <link rel="canonical" href="https://github.com/zeroclaw-labs/zeroclaw" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="canonical" href="https://zeroclaw.dev/" />
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="ZeroClaw — Fast, small, autonomous AI assistant infrastructure" />
   <meta property="og:description" content="AI-powered assistant infrastructure in Rust. Zero overhead, zero compromise. 3.4MB binary, &lt;10ms startup, 22+ providers. Built for production." />
-  <meta property="og:url" content="https://github.com/zeroclaw-labs/zeroclaw" />
+  <meta property="og:url" content="https://zeroclaw.dev/" />
   <meta property="og:locale" content="en_US" />
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ZeroClaw — Deploy anywhere. Swap anything." />
   <meta name="twitter:description" content="AI-powered assistant infrastructure in Rust. Zero overhead, zero compromise. 3.4MB, &lt;10ms startup, 22+ providers." />
   <meta name="twitter:site" content="@zeroclawlabs" />
-  <meta property="og:image" content="https://github.com/zeroclaw-labs/zeroclaw/raw/main/landing/assets/logo.png" />
+  <meta property="og:image" content="https://zeroclaw.dev/assets/zeroclaw_meta.png" />
+  <meta property="og:image:width" content="1500" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="ZeroClaw — AI-powered assistant infrastructure in Rust. Deploy anywhere, swap anything." />
+  <meta name="twitter:image" content="https://zeroclaw.dev/assets/zeroclaw_meta.png" />
+  <meta name="twitter:image:alt" content="ZeroClaw — AI-powered assistant infrastructure in Rust." />
   <meta name="theme-color" content="#0a0e14" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <meta name="googlebot" content="index, follow" />
   <link rel="preconnect" href="https://github.com" crossorigin />
-  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <!-- Favicons: ico (legacy), SVG (modern), PNG sizes, Apple touch, manifest -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/site.webmanifest" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preload" href="ideas.json" as="fetch" crossorigin />
 </head>
@@ -32,8 +43,8 @@
   <a href="#main" class="skip-link">Skip to main content</a>
   <header class="site-header" role="banner">
     <div class="wrap header-wrap">
-      <a href="#" class="logo" aria-label="ZeroClaw home">
-        <img src="assets/logo.png" width="140" height="48" alt="ZeroClaw" class="logo-img" fetchpriority="high" />
+      <a href="index.html" class="logo" aria-label="ZeroClaw home">
+        <img src="assets/zeroclaw_icon.png" width="48" height="48" alt="ZeroClaw" class="logo-img" fetchpriority="high" />
       </a>
       <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span class="nav-toggle-bar"></span></button>
       <nav id="main-nav" class="nav" aria-label="Main navigation">
@@ -59,7 +70,7 @@
   <main id="main" role="main">
     <section class="hero">
       <div class="wrap">
-        <img src="assets/logo.png" width="280" height="94" alt="" class="hero-logo" fetchpriority="high" />
+        <img src="assets/zeroclaw_icon.png" width="180" height="180" alt="" class="hero-logo" fetchpriority="high" />
         <p class="hero-badge">🚀 AI-Powered Assistant Infrastructure in Rust</p>
         <h1>Zero overhead. Zero compromise.</h1>
         <p class="hero-tagline">ZeroClaw is a next-generation AI assistant framework written in Rust. Ultra-lightweight, blazing fast, memory-safe, built for production.</p>
@@ -391,8 +402,9 @@ zeroclaw daemon   # gateway + channels (Telegram, Discord, Slack…)</code></pre
         "description": "AI-powered assistant infrastructure in Rust. Zero overhead, zero compromise. Ultra-lightweight (3.4MB), under 10ms startup, 22+ AI providers. Built for production.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Linux, macOS, Windows",
-        "url": "https://github.com/zeroclaw-labs/zeroclaw",
+        "url": "https://zeroclaw.dev",
         "codeRepository": "https://github.com/zeroclaw-labs/zeroclaw",
+        "image": "https://zeroclaw.dev/assets/zeroclaw_meta.png",
         "author": [{ "@id": "#org" }, { "@id": "#author" }],
         "featureList": "Blazing fast startup, Ultra lightweight binary, Pluggable trait architecture, Memory safe (Rust), Multi-platform channels, Zero runtime overhead"
       },
@@ -400,7 +412,8 @@ zeroclaw daemon   # gateway + channels (Telegram, Discord, Slack…)</code></pre
         "@id": "#org",
         "@type": "Organization",
         "name": "ZeroClaw Labs",
-        "url": "https://github.com/zeroclaw-labs/zeroclaw"
+        "url": "https://zeroclaw.dev",
+        "logo": "https://zeroclaw.dev/assets/zeroclaw_icon.png"
       },
       {
         "@id": "#author",
@@ -412,7 +425,7 @@ zeroclaw daemon   # gateway + channels (Telegram, Discord, Slack…)</code></pre
       {
         "@type": "WebSite",
         "name": "ZeroClaw",
-        "url": "https://github.com/zeroclaw-labs/zeroclaw",
+        "url": "https://zeroclaw.dev",
         "description": "ZeroClaw: AI-powered assistant infrastructure in Rust. Deploy anywhere, swap anything.",
         "publisher": { "@id": "#org" }
       }
