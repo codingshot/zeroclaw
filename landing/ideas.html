@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Ideas board — ZeroClaw | Use cases, features, hackathon bounties</title>
   <meta name="description" content="ZeroClaw ideas board: use case ideas, features, and hackathon bounties. SaaS, IoT, Legal, Hackathon, Tools, Content. Search and browse." />
   <meta name="keywords" content="ZeroClaw, ideas, use cases, hackathon, bounties, SaaS, IoT, Legal, features" />
@@ -20,7 +20,9 @@
   <meta name="twitter:description" content="Use case ideas, features, and hackathon bounties. Search by category or keyword." />
   <meta name="twitter:image" content="https://zeroclaw.dev/assets/zeroclaw_meta.png" />
   <meta name="theme-color" content="#0a0e14" />
+  <meta name="application-name" content="ZeroClaw" />
   <meta name="author" content="Argenis De La Rosa, ZeroClaw Labs" />
+  <meta property="og:site_name" content="ZeroClaw" />
   <link rel="icon" href="assets/favicon.ico" sizes="any" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png" />
@@ -35,7 +37,6 @@
       <a href="index.html" class="logo" aria-label="ZeroClaw home">
         <img src="assets/zeroclaw_icon.png" width="48" height="48" alt="ZeroClaw" class="logo-img" />
       </a>
-      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span class="nav-toggle-bar"></span></button>
       <nav id="main-nav" class="nav" aria-label="Main navigation">
         <a href="index.html" class="nav-link">Home</a>
         <a href="index.html#features" class="nav-link">Features</a>
@@ -48,6 +49,7 @@
         <a href="https://github.com/zeroclaw-labs/zeroclaw" class="btn btn-gh" rel="noopener noreferrer" target="_blank">GitHub</a>
         <a href="https://x.com/zeroclawlabs" class="btn btn-outline btn-icon-x" rel="noopener noreferrer" target="_blank" aria-label="X (Twitter)"><svg class="icon-x" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
       </div>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span class="nav-toggle-bar"></span></button>
     </div>
   </header>
 
@@ -88,6 +90,7 @@
         <div id="ideas-empty" class="ideas-empty-state hidden">
           <p class="ideas-empty-title">No ideas match</p>
           <p class="ideas-empty-desc">Try a different keyword or category.</p>
+          <button type="button" class="ideas-clear-btn ideas-empty-clear" aria-label="Clear search and category filters">Clear filters</button>
         </div>
       </div>
     </div>
