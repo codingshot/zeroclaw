@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ideas board — ZeroClaw | Use cases, features, hackathon bounties</title>
+  <meta name="description" content="ZeroClaw ideas board: use case ideas, features, and hackathon bounties. SaaS, IoT, Legal, Hackathon, Tools, Content. Search and browse." />
+  <meta name="robots" content="index, follow, max-snippet:-1" />
+  <link rel="canonical" href="ideas.html" />
+  <meta property="og:title" content="Ideas board — ZeroClaw" />
+  <meta property="og:description" content="Use case ideas, features, and hackathon bounties. Search by category or keyword." />
+  <meta name="theme-color" content="#0a0e14" />
+  <meta name="author" content="Argenis De La Rosa, ZeroClaw Labs" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="wrap header-wrap">
+      <a href="index.html" class="logo" aria-label="ZeroClaw home">
+        <img src="assets/logo.png" width="140" height="48" alt="ZeroClaw" class="logo-img" />
+      </a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span class="nav-toggle-bar"></span></button>
+      <nav id="main-nav" class="nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#features" class="nav-link">Features</a>
+        <a href="index.html#quick-start" class="nav-link">Quick start</a>
+        <a href="index.html#ideas" class="nav-link">Ideas</a>
+        <a href="index.html#get-started" class="nav-link">Get started</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/zeroclaw-labs/zeroclaw" class="btn btn-gh" rel="noopener noreferrer" target="_blank">GitHub</a>
+        <a href="https://x.com/zeroclawlabs" class="btn btn-outline" rel="noopener noreferrer" target="_blank" aria-label="X (Twitter)">X</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section class="ideas-hero">
+      <div class="wrap">
+        <h1 class="ideas-hero-title">Ideas board</h1>
+        <p class="ideas-hero-desc">Use case ideas, features, and hackathon bounties. Pick one and build.</p>
+      </div>
+    </section>
+    <div class="wrap ideas-page-wrap">
+      <div id="ideas-single" class="idea-single hidden" aria-live="polite">
+        <!-- Single idea detail, filled by ideas.js when ?id= -->
+      </div>
+
+      <div id="ideas-board" class="ideas-board">
+        <div class="ideas-toolbar">
+          <div class="ideas-search-wrap">
+            <label for="ideas-search" class="sr-only">Search ideas by keyword</label>
+            <input type="search" id="ideas-search" class="ideas-search" placeholder="Search ideas…" aria-label="Search ideas by keyword" autocomplete="off" />
+          </div>
+          <div class="ideas-filters">
+            <span class="ideas-filters-label">Category</span>
+            <div id="ideas-category-pills" class="ideas-category-pills" role="group" aria-label="Filter by category">
+              <!-- Filled by ideas.js: All + category pills -->
+            </div>
+            <label for="ideas-category" class="sr-only">Filter by category (dropdown)</label>
+            <select id="ideas-category" class="ideas-category-select" aria-label="Filter by category">
+              <option value="">All categories</option>
+            </select>
+          </div>
+        </div>
+        <p id="ideas-count" class="ideas-count" aria-live="polite"></p>
+        <div class="ideas-grid ideas-grid-full" id="ideas-container" role="list">
+          <!-- Filled by ideas.js -->
+        </div>
+        <div id="ideas-empty" class="ideas-empty-state hidden">
+          <p class="ideas-empty-title">No ideas match</p>
+          <p class="ideas-empty-desc">Try a different keyword or category.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <p class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="https://github.com/zeroclaw-labs/zeroclaw" rel="noopener noreferrer" target="_blank">GitHub</a>
+        <a href="https://x.com/zeroclawlabs" rel="noopener noreferrer" target="_blank">X</a>
+      </p>
+      <p class="footer-by">First built by <span class="author-wrap"><a href="https://www.linkedin.com/in/argenisdelarosa/" class="author-name" rel="noopener noreferrer" target="_blank">Argenis</a><span class="author-links"><a href="https://x.com/argenistherose" rel="noopener noreferrer" target="_blank" aria-label="Argenis on X">X</a><a href="https://www.linkedin.com/in/argenisdelarosa/" rel="noopener noreferrer" target="_blank" aria-label="Argenis on LinkedIn">LinkedIn</a><a href="https://github.com/theonlyhennygod" rel="noopener noreferrer" target="_blank" aria-label="Argenis on GitHub">GitHub</a><a href="https://www.argenis.xyz/" rel="noopener noreferrer" target="_blank" aria-label="Argenis&#39;s website">Website</a></span></span>.</p>
+      <p class="footer-legal">ZeroClaw — Deploy anywhere. Swap anything. 🦀</p>
+    </div>
+  </footer>
+
+  <script src="ideas.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "ZeroClaw Ideas Board",
+    "description": "Use case ideas, features, and hackathon bounties for ZeroClaw. Search by category: SaaS, IoT, Legal, Hackathon, Tools, Content.",
+    "url": "ideas.html",
+    "isPartOf": { "@type": "WebSite", "name": "ZeroClaw", "url": "https://github.com/zeroclaw-labs/zeroclaw" }
+  }
+  </script>
+  <script>
+    (function() {
+      var t = document.querySelector('.nav-toggle');
+      var n = document.getElementById('main-nav');
+      function closeNav() {
+        if (t && n && t.getAttribute('aria-expanded') === 'true') {
+          t.setAttribute('aria-expanded', 'false');
+          t.setAttribute('aria-label', 'Open menu');
+          n.classList.remove('nav-open');
+        }
+      }
+      if (t && n) {
+        t.addEventListener('click', function() {
+          var open = t.getAttribute('aria-expanded') === 'true';
+          t.setAttribute('aria-expanded', !open);
+          t.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+          n.classList.toggle('nav-open', !open);
+        });
+        n.querySelectorAll('.nav-link').forEach(function(a) { a.addEventListener('click', closeNav); });
+      }
+    })();
+  </script>
+</body>
+</html>

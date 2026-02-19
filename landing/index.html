@@ -4,45 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ZeroClaw — Fast, small, autonomous AI assistant infrastructure | Deploy anywhere, swap anything</title>
-  <meta name="description" content="ZeroClaw: Rust-first autonomous agent runtime. &lt;5MB RAM, runs on $10 hardware. Trait-driven providers, channels, tools. Secure by default. Open source." />
-  <meta name="keywords" content="ZeroClaw, AI assistant, autonomous agent, Rust, open source, IoT, chatbot, LLM, local AI, edge AI, Raspberry Pi" />
-  <meta name="author" content="ZeroClaw Labs" />
+  <meta name="description" content="ZeroClaw: AI-powered assistant infrastructure in Rust. Zero overhead, zero compromise. Ultra-lightweight (3.4MB), &lt;10ms startup, 22+ AI providers. Built for production." />
+  <meta name="keywords" content="ZeroClaw, AI assistant, Rust, autonomous agent, open source, IoT, chatbot, LLM, local AI, edge AI, Raspberry Pi, OpenAI, Anthropic, Telegram, Discord" />
+  <meta name="author" content="Argenis De La Rosa, ZeroClaw Labs" />
   <link rel="canonical" href="https://github.com/zeroclaw-labs/zeroclaw" />
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="ZeroClaw — Fast, small, autonomous AI assistant infrastructure" />
-  <meta property="og:description" content="Deploy anywhere. Swap anything. &lt;5MB RAM, runs on $10 hardware. 100% Rust. Trait-driven, secure-by-default." />
+  <meta property="og:description" content="AI-powered assistant infrastructure in Rust. Zero overhead, zero compromise. 3.4MB binary, &lt;10ms startup, 22+ providers. Built for production." />
   <meta property="og:url" content="https://github.com/zeroclaw-labs/zeroclaw" />
   <meta property="og:locale" content="en_US" />
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ZeroClaw — Deploy anywhere. Swap anything." />
-  <meta name="twitter:description" content="Fast, small, autonomous AI assistant infrastructure. Rust. &lt;5MB RAM. $10 hardware." />
+  <meta name="twitter:description" content="AI-powered assistant infrastructure in Rust. Zero overhead, zero compromise. 3.4MB, &lt;10ms startup, 22+ providers." />
   <meta name="twitter:site" content="@zeroclawlabs" />
   <meta property="og:image" content="https://github.com/zeroclaw-labs/zeroclaw/raw/main/landing/assets/logo.png" />
   <meta name="theme-color" content="#0a0e14" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="googlebot" content="index, follow" />
   <link rel="preconnect" href="https://github.com" crossorigin />
   <link rel="icon" type="image/png" href="assets/logo.png" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" href="ideas.json" as="fetch" crossorigin />
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-  <header class="site-header">
-    <div class="wrap">
+  <header class="site-header" role="banner">
+    <div class="wrap header-wrap">
       <a href="#" class="logo" aria-label="ZeroClaw home">
         <img src="assets/logo.png" width="140" height="48" alt="ZeroClaw" class="logo-img" fetchpriority="high" />
       </a>
       <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span class="nav-toggle-bar"></span></button>
-      <nav id="main-nav" class="nav" aria-label="Main">
-        <a href="#features">Features</a>
-        <a href="#benchmark">Benchmark</a>
-        <a href="#quick-start">Quick start</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#security">Security</a>
-        <a href="#use-cases">Use cases</a>
-        <a href="#tutorials">Tutorials</a>
-        <a href="#ideas">Ideas</a>
-        <a href="#contribute">Contribute</a>
+      <nav id="main-nav" class="nav" aria-label="Main navigation">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#benchmark" class="nav-link">Benchmark</a>
+        <a href="#quick-start" class="nav-link">Quick start</a>
+        <a href="#architecture" class="nav-link">Architecture</a>
+        <a href="#support" class="nav-link">Support</a>
+        <a href="#security" class="nav-link">Security</a>
+        <a href="#use-cases" class="nav-link">Use cases</a>
+        <a href="#tutorials" class="nav-link">Tutorials</a>
+        <a href="#ideas" class="nav-link">Ideas</a>
+        <a href="#contribute" class="nav-link">Contribute</a>
+        <a href="#get-started" class="nav-link">Get started</a>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/zeroclaw-labs/zeroclaw" class="btn btn-gh" rel="noopener noreferrer" target="_blank">GitHub</a>
@@ -51,18 +56,29 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" role="main">
     <section class="hero">
       <div class="wrap">
         <img src="assets/logo.png" width="280" height="94" alt="" class="hero-logo" fetchpriority="high" />
+        <p class="hero-badge">🚀 AI-Powered Assistant Infrastructure in Rust</p>
         <h1>Zero overhead. Zero compromise.</h1>
-        <p class="hero-tagline">Fast, small, and fully autonomous AI assistant infrastructure. Deploy anywhere. Swap anything.</p>
-        <p class="hero-sub">Runs on $10 hardware with &lt;5MB RAM — 100% Rust. Trait-driven architecture. Secure by default.</p>
+        <p class="hero-tagline">ZeroClaw is a next-generation AI assistant framework written in Rust. Ultra-lightweight, blazing fast, memory-safe, built for production.</p>
+        <p class="hero-sub">Deploy anywhere. Swap anything. Runs on $10 hardware with &lt;5MB RAM — trait-driven architecture, secure by default.</p>
         <p class="hero-stat">99% less memory than OpenClaw · 98% cheaper than a Mac mini</p>
         <div class="hero-actions">
-          <a href="https://github.com/zeroclaw-labs/zeroclaw" class="btn btn-primary" rel="noopener noreferrer" target="_blank">View on GitHub</a>
-          <a href="https://github.com/zeroclaw-labs/zeroclaw#quick-start" class="btn btn-outline" rel="noopener noreferrer" target="_blank">Quick start</a>
+          <a href="https://github.com/zeroclaw-labs/zeroclaw" class="btn btn-primary" rel="noopener noreferrer" target="_blank">Visit GitHub</a>
+          <a href="#features" class="btn btn-outline">Learn more</a>
         </div>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Key metrics">
+      <div class="wrap">
+        <ul class="stats-list">
+          <li><span class="stat-value">&lt;10ms</span><span class="stat-label">Startup time</span></li>
+          <li><span class="stat-value">3.4MB</span><span class="stat-label">Binary size</span></li>
+          <li><span class="stat-value">22+</span><span class="stat-label">AI providers</span></li>
+        </ul>
       </div>
     </section>
 
@@ -71,21 +87,24 @@
         <h2>Support ZeroClaw</h2>
         <p>Star the repo to show your support and stay in the loop. One click on GitHub.</p>
         <a href="https://github.com/zeroclaw-labs/zeroclaw" class="btn btn-star" rel="noopener noreferrer" target="_blank" aria-label="Star zeroclaw-labs/zeroclaw on GitHub">
-          <span class="btn-star-icon" aria-hidden="true">★</span> Star on GitHub
+          <span class="btn-star-icon" aria-hidden="true">★</span> Star on GitHub<span class="star-count" data-star-count aria-hidden="true"></span>
         </a>
       </div>
     </section>
 
     <section id="features" class="features">
       <div class="wrap">
-        <h2>Features</h2>
-        <ul class="feature-grid">
-          <li><strong>Lean runtime by default</strong> — CLI and status run in a few-megabyte memory envelope on release builds.</li>
-          <li><strong>Cost-efficient deployment</strong> — Low-cost boards and small cloud instances; no heavyweight runtime.</li>
-          <li><strong>Fast cold starts</strong> — Single-binary Rust; command and daemon startup near-instant.</li>
-          <li><strong>Portable architecture</strong> — One binary across ARM, x86, RISC-V; swappable providers, channels, tools.</li>
+        <h2>Why choose ZeroClaw?</h2>
+        <p class="features-sub">Lightweight infrastructure designed for modern AI applications.</p>
+        <ul class="why-grid">
+          <li><span class="why-icon" aria-hidden="true">⚡</span><strong>Blazing fast</strong> — Cold startup &lt;10ms, instant response.</li>
+          <li><span class="why-icon" aria-hidden="true">📦</span><strong>Ultra lightweight</strong> — Binary only 3.4MB, minimal resource usage.</li>
+          <li><span class="why-icon" aria-hidden="true">🔌</span><strong>Pluggable architecture</strong> — Flexible component extension based on Rust trait system.</li>
+          <li><span class="why-icon" aria-hidden="true">🔒</span><strong>Memory safe</strong> — Guaranteed by Rust, no data races, no memory leaks.</li>
+          <li><span class="why-icon" aria-hidden="true">🌐</span><strong>Multi-platform</strong> — 22+ AI providers, Telegram, Discord, Slack and more.</li>
+          <li><span class="why-icon" aria-hidden="true">🚀</span><strong>Zero overhead</strong> — Zero runtime overhead, uncompromised performance.</li>
         </ul>
-        <p class="features-why"><strong>Why teams pick ZeroClaw:</strong> Lean by default · Secure by design (pairing, sandboxing, allowlists, workspace scoping) · Fully swappable traits · No lock-in (OpenAI-compatible + custom endpoints).</p>
+        <p class="features-why"><strong>Teams also get:</strong> Secure by design (pairing, sandboxing, allowlists) · Fully swappable traits · No lock-in (OpenAI-compatible + custom endpoints).</p>
       </div>
     </section>
 
@@ -114,6 +133,27 @@
           </table>
         </div>
         <p class="benchmark-note"><a href="https://github.com/zeroclaw-labs/zeroclaw#benchmark-snapshot-zeroclaw-vs-openclaw-reproducible" rel="noopener noreferrer" target="_blank">Reproducible local measurement</a> — run <code>cargo build --release</code> and <code>/usr/bin/time -l target/release/zeroclaw status</code> on your machine.</p>
+        <h3 class="comparison-title">Performance comparison with OpenClaw</h3>
+        <div class="comparison-cards">
+          <div class="comparison-card comparison-card-zeroclaw">
+            <h4>ZeroClaw</h4>
+            <dl>
+              <dt>Startup time</dt><dd>&lt;10ms</dd>
+              <dt>Binary size</dt><dd>3.4MB</dd>
+              <dt>Memory usage</dt><dd>Very low</dd>
+              <dt>Safety guarantee</dt><dd>Rust guaranteed</dd>
+            </dl>
+          </div>
+          <div class="comparison-card">
+            <h4>OpenClaw</h4>
+            <dl>
+              <dt>Startup time</dt><dd>~500ms</dd>
+              <dt>Binary size</dt><dd>~150MB</dd>
+              <dt>Memory usage</dt><dd>High</dd>
+              <dt>Safety guarantee</dt><dd>Runtime checks</dd>
+            </dl>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -135,8 +175,14 @@ zeroclaw daemon   # gateway + channels (Telegram, Discord, Slack…)</code></pre
 
     <section id="architecture" class="architecture">
       <div class="wrap">
-        <h2>Architecture</h2>
-        <p class="arch-intro">Every subsystem is a <strong>trait</strong> — swap implementations with a config change, zero code changes.</p>
+        <h2>Flexible architecture design</h2>
+        <p class="arch-intro">Pluggable architecture based on Rust trait system.</p>
+        <ul class="arch-layers">
+          <li><strong>Core layer</strong> — Trait-based architecture · Memory safety guarantee · Async runtime.</li>
+          <li><strong>AI adapter layer</strong> — Unified API abstraction · 22+ AI providers · Flexible switching.</li>
+          <li><strong>Channel layer</strong> — Multi-platform support · Message routing · Event handling.</li>
+        </ul>
+        <h3 class="arch-table-title">Subsystems at a glance</h3>
         <div class="table-wrap">
           <table class="arch-table" aria-label="Subsystems and traits">
             <thead>
@@ -155,6 +201,24 @@ zeroclaw daemon   # gateway + channels (Telegram, Discord, Slack…)</code></pre
         </div>
         <p class="arch-memory">Memory is a full-stack search engine: SQLite vector + FTS5 keyword, hybrid merge, no Pinecone or Elasticsearch. Agent recalls, saves, and manages memory via tools.</p>
         <p class="arch-note"><a href="https://github.com/zeroclaw-labs/zeroclaw#architecture" rel="noopener noreferrer" target="_blank">Full architecture table and diagram</a> in the repo.</p>
+      </div>
+    </section>
+
+    <section id="support" class="support">
+      <div class="wrap">
+        <h2>Broad support</h2>
+        <p class="support-intro">Seamless integration with mainstream AI providers and communication platforms.</p>
+        <div class="support-pills">
+          <span class="pill">OpenAI</span>
+          <span class="pill">Anthropic</span>
+          <span class="pill">Claude</span>
+          <span class="pill">Gemini</span>
+          <span class="pill">Mistral</span>
+          <span class="pill">Ollama</span>
+          <span class="pill">Telegram</span>
+          <span class="pill">Discord</span>
+          <span class="pill">Slack</span>
+        </div>
       </div>
     </section>
 
@@ -218,19 +282,14 @@ zeroclaw daemon   # gateway + channels (Telegram, Discord, Slack…)</code></pre
       </div>
     </section>
 
-    <section id="ideas" class="ideas">
+    <section id="ideas" class="ideas" aria-labelledby="ideas-heading">
       <div class="wrap">
-        <h2>Ideas board</h2>
-        <p class="ideas-intro">Use case ideas, features, and hackathon bounties. Pick one and build.</p>
-        <div class="ideas-controls">
-          <label for="idea-filter" class="sr-only">Filter by category</label>
-          <select id="idea-filter" aria-label="Filter ideas by category">
-            <option value="">All categories</option>
-          </select>
+        <h2 id="ideas-heading">Featured ideas</h2>
+        <p class="ideas-intro">Use case ideas, features, and hackathon bounties. Pick one and build. <a href="ideas.html">Search all ideas &rarr;</a></p>
+        <div class="ideas-grid ideas-grid-featured" id="ideas-container" role="list">
+          <!-- Filled by main.js: featured only, links to ideas.html?id= -->
         </div>
-        <div class="ideas-grid" id="ideas-container" role="list">
-          <!-- Filled by main.js from ideas.json -->
-        </div>
+        <p class="ideas-cta"><a href="ideas.html" class="btn btn-outline">View all ideas &amp; search</a></p>
       </div>
     </section>
 
@@ -247,25 +306,52 @@ zeroclaw daemon   # gateway + channels (Telegram, Discord, Slack…)</code></pre
         <a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/CONTRIBUTING.md" class="btn btn-outline" rel="noopener noreferrer" target="_blank">Full contributing guide</a>
       </div>
     </section>
+
+    <section id="get-started" class="get-started-cta">
+      <div class="wrap">
+        <h2>Get started with ZeroClaw</h2>
+        <p class="get-started-intro">Next-generation AI assistant infrastructure built with Rust, designed for production.</p>
+        <a href="https://github.com/zeroclaw-labs/zeroclaw" class="btn btn-primary btn-lg" rel="noopener noreferrer" target="_blank">Visit GitHub repository</a>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="wrap">
-      <p class="footer-quick">
-        <strong>Getting started:</strong>
-        <a href="https://github.com/zeroclaw-labs/zeroclaw#quick-start" rel="noopener noreferrer" target="_blank">Quick start</a> ·
-        <a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/bootstrap.sh" rel="noopener noreferrer" target="_blank">One-click setup</a> ·
-        <a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/docs/README.md" rel="noopener noreferrer" target="_blank">Docs hub</a> ·
-        <a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/docs/SUMMARY.md" rel="noopener noreferrer" target="_blank">Docs TOC</a>
-      </p>
-      <p class="footer-links">
-        <a href="https://github.com/zeroclaw-labs/zeroclaw" rel="noopener noreferrer" target="_blank">GitHub</a>
-        <a href="https://x.com/zeroclawlabs" rel="noopener noreferrer" target="_blank">X (Twitter)</a>
-        <a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/docs/README.md" rel="noopener noreferrer" target="_blank">Docs</a>
-        <a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/CONTRIBUTING.md" rel="noopener noreferrer" target="_blank">Contribute</a>
-      </p>
-      <p class="footer-lang"><strong>Languages:</strong> <a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/README.md" rel="noopener noreferrer" target="_blank">English</a> · <a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/README.zh-CN.md" rel="noopener noreferrer" target="_blank">简体中文</a> · <a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/README.ja.md" rel="noopener noreferrer" target="_blank">日本語</a> · <a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/README.ru.md" rel="noopener noreferrer" target="_blank">Русский</a></p>
-      <p class="footer-community">Built by students and members of the Harvard, MIT, and Sundai.Club communities.</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-heading">Product</h3>
+          <ul class="footer-list">
+            <li><a href="https://github.com/zeroclaw-labs/zeroclaw#quick-start" rel="noopener noreferrer" target="_blank">Quick start</a></li>
+            <li><a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/bootstrap.sh" rel="noopener noreferrer" target="_blank">One-click setup</a></li>
+            <li><a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/docs/README.md" rel="noopener noreferrer" target="_blank">Docs hub</a></li>
+            <li><a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/docs/SUMMARY.md" rel="noopener noreferrer" target="_blank">Docs TOC</a></li>
+            <li><a href="ideas.html">Ideas board</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Community</h3>
+          <ul class="footer-list">
+            <li><a href="https://github.com/zeroclaw-labs/zeroclaw" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+            <li><a href="https://x.com/zeroclawlabs" rel="noopener noreferrer" target="_blank">X (Twitter)</a></li>
+            <li><a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/CONTRIBUTING.md" rel="noopener noreferrer" target="_blank">Contribute</a></li>
+            <li><a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/SECURITY.md" rel="noopener noreferrer" target="_blank">Security</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Languages</h3>
+          <ul class="footer-list">
+            <li><a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/README.md" rel="noopener noreferrer" target="_blank">English</a></li>
+            <li><a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/README.zh-CN.md" rel="noopener noreferrer" target="_blank">简体中文</a></li>
+            <li><a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/README.ja.md" rel="noopener noreferrer" target="_blank">日本語</a></li>
+            <li><a href="https://github.com/zeroclaw-labs/zeroclaw/blob/main/README.ru.md" rel="noopener noreferrer" target="_blank">Русский</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-cta">
+        <a href="https://github.com/zeroclaw-labs/zeroclaw" class="btn btn-star" rel="noopener noreferrer" target="_blank"><span class="btn-star-icon" aria-hidden="true">★</span> Star on GitHub<span class="star-count" data-star-count aria-hidden="true"></span></a>
+      </div>
+      <p class="footer-by">First built by <span class="author-wrap"><a href="https://www.linkedin.com/in/argenisdelarosa/" class="author-name" rel="noopener noreferrer" target="_blank">Argenis</a><span class="author-links"><a href="https://x.com/argenistherose" rel="noopener noreferrer" target="_blank" aria-label="Argenis on X">X</a><a href="https://www.linkedin.com/in/argenisdelarosa/" rel="noopener noreferrer" target="_blank" aria-label="Argenis on LinkedIn">LinkedIn</a><a href="https://github.com/theonlyhennygod" rel="noopener noreferrer" target="_blank" aria-label="Argenis on GitHub">GitHub</a><a href="https://www.argenis.xyz/" rel="noopener noreferrer" target="_blank" aria-label="Argenis&#39;s website">Website</a></span></span>. Built with the Harvard, MIT, and Sundai.Club communities.</p>
       <p class="footer-legal">ZeroClaw — Zero overhead. Zero compromise. Deploy anywhere. Swap anything. 🦀</p>
     </div>
   </footer>
@@ -275,6 +361,13 @@ zeroclaw daemon   # gateway + channels (Telegram, Discord, Slack…)</code></pre
     (function() {
       var t = document.querySelector('.nav-toggle');
       var n = document.getElementById('main-nav');
+      function closeNav() {
+        if (t && n && t.getAttribute('aria-expanded') === 'true') {
+          t.setAttribute('aria-expanded', 'false');
+          t.setAttribute('aria-label', 'Open menu');
+          n.classList.remove('nav-open');
+        }
+      }
       if (t && n) {
         t.addEventListener('click', function() {
           var open = t.getAttribute('aria-expanded') === 'true';
@@ -282,20 +375,48 @@ zeroclaw daemon   # gateway + channels (Telegram, Discord, Slack…)</code></pre
           t.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
           n.classList.toggle('nav-open', !open);
         });
+        n.querySelectorAll('.nav-link').forEach(function(a) {
+          a.addEventListener('click', closeNav);
+        });
       }
     })();
   </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "ZeroClaw",
-    "description": "Fast, small, and fully autonomous AI assistant infrastructure. Deploy anywhere. Swap anything.",
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Linux, macOS, Windows",
-    "url": "https://github.com/zeroclaw-labs/zeroclaw",
-    "codeRepository": "https://github.com/zeroclaw-labs/zeroclaw",
-    "author": { "@type": "Organization", "name": "ZeroClaw Labs" }
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "ZeroClaw",
+        "description": "AI-powered assistant infrastructure in Rust. Zero overhead, zero compromise. Ultra-lightweight (3.4MB), under 10ms startup, 22+ AI providers. Built for production.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Linux, macOS, Windows",
+        "url": "https://github.com/zeroclaw-labs/zeroclaw",
+        "codeRepository": "https://github.com/zeroclaw-labs/zeroclaw",
+        "author": [{ "@id": "#org" }, { "@id": "#author" }],
+        "featureList": "Blazing fast startup, Ultra lightweight binary, Pluggable trait architecture, Memory safe (Rust), Multi-platform channels, Zero runtime overhead"
+      },
+      {
+        "@id": "#org",
+        "@type": "Organization",
+        "name": "ZeroClaw Labs",
+        "url": "https://github.com/zeroclaw-labs/zeroclaw"
+      },
+      {
+        "@id": "#author",
+        "@type": "Person",
+        "name": "Argenis De La Rosa",
+        "url": "https://www.argenis.xyz/",
+        "sameAs": ["https://x.com/argenistherose", "https://www.linkedin.com/in/argenisdelarosa/", "https://github.com/theonlyhennygod", "https://www.argenis.xyz/"]
+      },
+      {
+        "@type": "WebSite",
+        "name": "ZeroClaw",
+        "url": "https://github.com/zeroclaw-labs/zeroclaw",
+        "description": "ZeroClaw: AI-powered assistant infrastructure in Rust. Deploy anywhere, swap anything.",
+        "publisher": { "@id": "#org" }
+      }
+    ]
   }
   </script>
 </body>

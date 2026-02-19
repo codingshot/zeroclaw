@@ -7,7 +7,9 @@ Performant, SEO-optimized landing page for ZeroClaw. Static HTML/CSS/JS — no b
 - **index.html** — Single-page layout: hero (with logo), star-CTA, features, use cases, tutorials gallery, ideas board (from JSON), contribution guidelines, footer. Mobile nav toggle.
 - **styles.css** — Brand theme (electric blue accent, silver/grey text, dark background); CSS variables; mobile-first responsive; touch-friendly tap targets.
 - **main.js** — Loads `ideas.json` and renders the ideas board with category filter.
-- **ideas.json** — Ideas by category (SaaS, IoT, Legal, Hackathon, Tools, Content). Edit to add or reorder ideas.
+- **ideas.json** — Ideas by category (SaaS, IoT, Legal, Hackathon, Tools, Content); `featuredIds` for landing. Edit to add or reorder.
+- **ideas.html** — Full ideas board: search by keyword, filter by category, single-idea view at `?id=<ideaId>`.
+- **ideas.js** — Loads ideas.json, handles search/filter and single-idea route for ideas.html.
 - **assets/logo.png** — ZeroClaw logo (armored crab, electric blue glow). Used in header and hero.
 
 ## Links

@@ -1,11 +1,13 @@
 {
+  "featuredIds": ["s1", "i1", "l1", "h1", "t1", "c1"],
   "categories": [
     { "id": "saas", "label": "SaaS", "description": "API-first assistant, white-label bot, managed run-your-own, multi-tenant" },
     { "id": "iot", "label": "IoT & Hardware", "description": "Drones, gateways, SBCs, burners, fleet, DePIN nodes" },
     { "id": "legal", "label": "Legal & Compliance", "description": "Legal aid, courts, contracts, audit, correctional" },
     { "id": "hackathon", "label": "Hackathon & Bounties", "description": "Tracks, bounties, first PR, observability, security" },
     { "id": "tools", "label": "Tools & Integrations", "description": "Channels, providers, tools, x402, runbooks" },
-    { "id": "content", "label": "Content & Tutorials", "description": "Videos, runbooks, comparisons, blog posts" }
+    { "id": "content", "label": "Content & Tutorials", "description": "Videos, runbooks, comparisons, blog posts" },
+    { "id": "local", "label": "Local & Community", "description": "Local government, SMB, community, field" }
   ],
   "ideas": [
     { "id": "s1", "category": "saas", "title": "API-first assistant", "summary": "Expose agent as API; pay-per-request or subscription.", "link": null },
@@ -30,6 +32,16 @@
     { "id": "t2", "category": "tools", "title": "Wallet-as-allowlist", "summary": "Allowlist entries from signed message or wallet; gateway accepts signed payload.", "link": null },
     { "id": "t3", "category": "tools", "title": "Offline queue", "summary": "Queue messages when channel unreachable; sync when back online; for field and burners.", "link": null },
     { "id": "t4", "category": "tools", "title": "Voice in / voice out", "summary": "Channel that accepts voice (STT) and returns TTS; for kiosks and accessibility.", "link": null },
+    { "id": "t5", "category": "tools", "title": "Chat to GitHub support ticket", "summary": "Turn Slack/Telegram/Discord message into a GitHub issue or support ticket; tool calls GitHub API; allowlist for who can create.", "link": null },
+    { "id": "t6", "category": "tools", "title": "PR review assistant", "summary": "Agent that reviews pull requests: summarizes changes, suggests improvements; tool for GitHub API; optional allowlist repos.", "link": null },
+    { "id": "t7", "category": "tools", "title": "Fact checker and look-up", "summary": "Look up facts via search or trusted APIs; cite sources; optional RAG over trusted docs; for content and research.", "link": null },
+    { "id": "t8", "category": "tools", "title": "Weather / Calendar API tool", "summary": "Tool that calls weather or calendar APIs; for scheduling, context, and automation.", "link": null },
+    { "id": "l5", "category": "legal", "title": "Compliance checklist assistant", "summary": "RAG over policy and regulations; checklist for audits; internal only; full audit trail.", "link": null },
+    { "id": "h6", "category": "hackathon", "title": "Observability in a weekend", "summary": "Prometheus or OTel Observer; non-sensitive metrics only; doc for operators.", "link": null },
+    { "id": "h7", "category": "hackathon", "title": "Security hardening bounty", "summary": "One concrete improvement: rate limit, audit log, or pairing UX; threat note and rollback in PR.", "link": null },
+    { "id": "h8", "category": "hackathon", "title": "Multilingual runbook", "summary": "Same runbook (e.g. ZeroClaw on RPi) in EN + one of ZH/JA/RU; linked from SUMMARY; parity with main doc.", "link": null },
+    { "id": "loc1", "category": "local", "title": "Local government FAQ", "summary": "RAG over public ordinances and FAQs; web or SMS channel; multilingual; accessibility.", "link": null },
+    { "id": "loc2", "category": "local", "title": "SMB helpdesk bot", "summary": "Internal Slack/Teams bot; RAG over internal KB and runbooks; allowlist = support team; audit for compliance.", "link": null },
     { "id": "c1", "category": "content", "title": "ZeroClaw in 15 min (video)", "summary": "Clone, onboard, first Telegram message, first hardware command.", "link": null },
     { "id": "c2", "category": "content", "title": "Legal tech without the lock-in", "summary": "Blog: legal use cases, RAG, audit, and why open runtime matters.", "link": null },
     { "id": "c3", "category": "content", "title": "From zero to DePIN node", "summary": "Tutorial: deploy ZeroClaw on VPS or RPi; channel for control; optional x402.", "link": null },
