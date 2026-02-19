@@ -74,10 +74,10 @@
       var href = 'ideas.html?id=' + encodeURIComponent(idea.id);
       li.innerHTML =
         '<a href="' + escapeHtml(href) + '" class="idea-card-inner">' +
-        '<span class="idea-cat-pill">' + escapeHtml(catLabel) + '</span>' +
         '<span class="idea-title">' + escapeHtml(idea.title) + '</span>' +
         '<span class="idea-summary">' + escapeHtml(idea.summary) + '</span>' +
         '<span class="idea-read-more">View idea &rarr;</span>' +
+        '<span class="idea-cat-pill">' + escapeHtml(catLabel) + '</span>' +
         '</a>';
       container.appendChild(li);
     });
