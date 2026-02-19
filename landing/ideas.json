@@ -1,0 +1,38 @@
+{
+  "categories": [
+    { "id": "saas", "label": "SaaS", "description": "API-first assistant, white-label bot, managed run-your-own, multi-tenant" },
+    { "id": "iot", "label": "IoT & Hardware", "description": "Drones, gateways, SBCs, burners, fleet, DePIN nodes" },
+    { "id": "legal", "label": "Legal & Compliance", "description": "Legal aid, courts, contracts, audit, correctional" },
+    { "id": "hackathon", "label": "Hackathon & Bounties", "description": "Tracks, bounties, first PR, observability, security" },
+    { "id": "tools", "label": "Tools & Integrations", "description": "Channels, providers, tools, x402, runbooks" },
+    { "id": "content", "label": "Content & Tutorials", "description": "Videos, runbooks, comparisons, blog posts" }
+  ],
+  "ideas": [
+    { "id": "s1", "category": "saas", "title": "API-first assistant", "summary": "Expose agent as API; pay-per-request or subscription.", "link": null },
+    { "id": "s2", "category": "saas", "title": "White-label bot", "summary": "Rebrand ZeroClaw for agencies; same binary, custom identity and channels.", "link": null },
+    { "id": "s3", "category": "saas", "title": "Managed run-your-own", "summary": "One-click deploy on VPS; operator manages updates and tunnel.", "link": null },
+    { "id": "s4", "category": "saas", "title": "Multi-tenant dashboard", "summary": "Read-only UI for 'my agents' by config or API; separate repo.", "link": null },
+    { "id": "i1", "category": "iot", "title": "Drone fleet dispatcher", "summary": "One agent per fleet; Telegram/webhook for mission request; tool calls drone API; optional x402 per mission.", "link": null },
+    { "id": "i2", "category": "iot", "title": "DePIN node brain", "summary": "Agent on each node: status, diagnostics, commands via secure channel; x402 pay-per-task.", "link": null },
+    { "id": "i3", "category": "iot", "title": "Burner-phone relay", "summary": "ZeroClaw on cheap Android or gateway; WhatsApp in, commands out; minimal footprint.", "link": null },
+    { "id": "i4", "category": "iot", "title": "Classroom lab in a box", "summary": "RPi + ZeroClaw + one peripheral (e.g. Arduino); students chat to control hardware; one image for entire lab.", "link": null },
+    { "id": "i5", "category": "iot", "title": "Pay-per-drone-task", "summary": "Integrate DJI or PX4 as tool; optional x402 so requester pays per mission.", "link": null },
+    { "id": "l1", "category": "legal", "title": "Per-language legal aid bot", "summary": "One agent, RAG over jurisdiction-specific legal aid docs; WhatsApp or web; multilingual.", "link": null },
+    { "id": "l2", "category": "legal", "title": "Court clerk assistant", "summary": "Internal only; RAG over rules and forms; draft orders; full audit; air-gap option.", "link": null },
+    { "id": "l3", "category": "legal", "title": "Legal corpus skill", "summary": "Skill pack (TOML + SKILL.md) + RAG over public legal corpus; form templates as tools.", "link": null },
+    { "id": "l4", "category": "legal", "title": "Contract redline summarizer", "summary": "Tool that reads doc, returns summary of changes; workspace-only; for legal/compliance.", "link": null },
+    { "id": "h1", "category": "hackathon", "title": "Nostr channel", "summary": "New Channel for Nostr DMs; allowlist by pubkey; E2EE if protocol supports.", "link": null },
+    { "id": "h2", "category": "hackathon", "title": "Bluesky channel", "summary": "New Channel for Bluesky DMs or posts; allowlist by handle.", "link": null },
+    { "id": "h3", "category": "hackathon", "title": "402 in 48h", "summary": "Implement x402 client tool or provider wrapper; demo with a paid API.", "link": null },
+    { "id": "h4", "category": "hackathon", "title": "Runbook runner", "summary": "Tool that executes only approved runbook steps from a repo; audit log; for SRE/ops.", "link": null },
+    { "id": "h5", "category": "hackathon", "title": "Best first issue bounty", "summary": "Curate 3–5 'good first issue' or 'hackathon' labels; prize for first merged PR from each.", "link": null },
+    { "id": "t1", "category": "tools", "title": "x402 tool", "summary": "HTTP client that handles 402, pays via facilitator, retries with PAYMENT-SIGNATURE.", "link": null },
+    { "id": "t2", "category": "tools", "title": "Wallet-as-allowlist", "summary": "Allowlist entries from signed message or wallet; gateway accepts signed payload.", "link": null },
+    { "id": "t3", "category": "tools", "title": "Offline queue", "summary": "Queue messages when channel unreachable; sync when back online; for field and burners.", "link": null },
+    { "id": "t4", "category": "tools", "title": "Voice in / voice out", "summary": "Channel that accepts voice (STT) and returns TTS; for kiosks and accessibility.", "link": null },
+    { "id": "c1", "category": "content", "title": "ZeroClaw in 15 min (video)", "summary": "Clone, onboard, first Telegram message, first hardware command.", "link": null },
+    { "id": "c2", "category": "content", "title": "Legal tech without the lock-in", "summary": "Blog: legal use cases, RAG, audit, and why open runtime matters.", "link": null },
+    { "id": "c3", "category": "content", "title": "From zero to DePIN node", "summary": "Tutorial: deploy ZeroClaw on VPS or RPi; channel for control; optional x402.", "link": null },
+    { "id": "c4", "category": "content", "title": "Comparison table (updated)", "summary": "ZeroClaw vs OpenClaw vs NanoBot vs PicoClaw; link to reproducible benchmark commands.", "link": null }
+  ]
+}

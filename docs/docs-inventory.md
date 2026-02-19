@@ -95,6 +95,13 @@ These are valuable context, but **not strict runtime contracts**.
 |---|---|
 | `docs/project-triage-snapshot-2026-02-18.md` | Snapshot |
 
+## Landing / Web
+
+| Doc | Type | Audience |
+|---|---|---|
+| `landing/README.md` | Current Guide | maintainers / deployers |
+| `landing/index.html` | Landing page | visitors (marketing, SEO) |
+
 ## Maintenance Recommendations
 
 1. Update `commands-reference` whenever CLI surface changes.
