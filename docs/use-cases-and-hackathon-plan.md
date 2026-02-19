@@ -20,7 +20,11 @@ This document outlines **use cases** for ZeroClaw and a **hackathon plan** for b
 - **x402 integration** — HTTP 402 payment protocol; agents as buyers/sellers; tool/provider/gateway options; hackathon idea
 - **Crypto narratives** — DePIN, agentic payments, decentralized inference, wallet-as-identity, micropayments, censorship-resistant AI, token-incentivized agents
 - **Hardware companies** — SBC/maker, MCU/embedded, drone, phone, gateway/hub, PC/server, semiconductor segments and ZeroClaw fit
-- **Hardware devices** — concrete device types (RPi, ESP32, Nucleo, Arduino, Pico, burner phones, drones, gateways, NUC, VPS) with “works today” vs “future”
+- **Hardware devices** — concrete device types (RPi, ESP32, Nucleo, Arduino, Pico, burner phones, drones, gateways, NUC, VPS) with “works today” vs “future”; **robot-relevant devices** (companion PC, ground station, gateway, on-board, kiosk)
+- **Robot use cases** — drones, rovers, arms, service robots; where ZeroClaw runs; local vs cloud models
+- **Local models** — Ollama, LM Studio; when to use which; device/RAM fit (RPi 4/5, NUC, Jetson)
+- **Current integrations summary** — registry by category (Chat, AI, Productivity, Music, Smart home, Tools, Media, Social, Platform); Available / Active / ComingSoon
+- **More integrations to add** — suggested channels (Nostr, Bluesky, Teams, WebChat, SMS, ROS 2), tools (Notion, Linear, Home Assistant, Weather, x402, drone API), providers (Hugging Face, LM Studio), peripherals
 - **Competitive snapshot** — ZeroClaw vs OpenClaw, NanoBot, PicoClaw (runtime, RAM, startup, hardware); why choose ZeroClaw
 - **Taglines by audience** — makers, enterprises, crypto, hardware vendors, OpenClaw users, developers, global
 - **Partnership checklist** — what hardware/SaaS partners need (arch, OS, install, config, security, docs)
@@ -35,6 +39,9 @@ This document outlines **use cases** for ZeroClaw and a **hackathon plan** for b
 - Rules, judging criteria, submission template, and prizes
 - **Hackathon extras** — FAQ for participants; common pitfalls; judge scoring sheet; copy templates (announcement, reminders, submission form, judge packet)
 - **Potential sponsors and outreach** — sponsor categories (hardware, cloud, crypto, AI, dev tools, foundations, corporate); tiers (title, track, prize, community); outreach timeline and email template
+- **Top AI communities to reach out to** — Discord (LMSYS, LangChain, LlamaIndex, Rust, etc.); Reddit (r/LocalLLaMA, r/selfhosted, r/raspberry_pi); Hugging Face, GitHub, Twitter/X, LinkedIn; outreach tips
+- **Improved hackathon ideas** — copy-paste track prompts, judging angles per track, prize ideas (smallest binary, best first PR, community pick, most mergeable, best demo), themed mini-tracks, how to improve over time
+- **Hackathon content kit** — [docs/hackathon-content/](hackathon-content/README.md): judges outreach, sponsors outreach, builder segments, personas (tailored messaging and channels)
 
 Last updated: **February 18, 2026**.
 
@@ -496,7 +503,164 @@ Concrete **device types** (not exhaustive) where ZeroClaw could run natively or 
 
 **Narrative:** “One runtime, many devices — from Raspberry Pi to Nucleo to (future) ESP32 and burner phones; same config, same channels, same agent.”
 
-### 1.18 Competitive Snapshot (Agent Runtimes)
+#### Robot-relevant devices (expanded)
+
+| Device class | Examples | ZeroClaw role | Notes |
+|--------------|----------|---------------|-------|
+| **Companion computer (on robot)** | RPi 4/5 or Jetson Nano on drone, rover, or arm | Agent runs on companion; channel (Telegram/webhook) for commands; tool calls robot API (flight, drive, gripper). | Same as “drones with companion PC”; works today. |
+| **Ground station / mission control** | Laptop or NUC running ZeroClaw | Operator sends “fly to waypoint X” via Telegram; ZeroClaw calls drone/robot API via tool; no ZeroClaw on robot. | Cloud or local LLM; robot is API endpoint. |
+| **Edge gateway (robot fleet)** | One RPi or NUC per site; multiple robots behind it | ZeroClaw on gateway; tools for each robot type; one channel for operator; optional x402 per task. | Fleet dispatch use case. |
+| **On-board (future)** | Jetson Orin Nano, Qualcomm RB5, etc. | ZeroClaw + local model on robot; natural language to motion/actuators; RAG over robot docs. | Needs port and local provider; future. |
+| **Kiosk / HRI** | Tablet or touchscreen on service robot | ZeroClaw behind kiosk; web or webhook “channel”; user talks to agent that drives robot or answers FAQ. | Channel = kiosk UI; robot controlled via tool. |
+
+### 1.18 Robot use cases
+
+Use cases for **robots** (drones, rovers, arms, service robots) with ZeroClaw as the agent layer. See also [1.12 IoT marketplace](use-cases-and-hackathon-plan.md#112-iot-marketplace-outline-burner-phones-drones-edge-devices) and [1.16 Hardware companies](use-cases-and-hackathon-plan.md#116-hardware-companies-vendor--segment-outline).
+
+| Robot type | Use case | Where ZeroClaw runs | Local vs cloud model | Notes |
+|------------|----------|---------------------|----------------------|-------|
+| **Consumer / prosumer drone** | “Fly to waypoint X”; “Return home”; “Start recording.” | Companion PC on drone (RPi/Jetson) or ground station (laptop). | Cloud (Telegram → host → API) or local on companion (Ollama + tool); local saves latency and works offline. | Tool wraps drone SDK (DJI, PX4, ArduPilot); channel = Telegram or webhook. |
+| **Rover / UGV** | “Drive to coordinates”; “Stop”; “Report battery.” | Companion PC on rover or gateway. | Same: cloud for simple, local (Ollama) for low latency or offline. | Tool for drive/status API; optional RAG over manual. |
+| **Robot arm / gripper** | “Pick object at X”; “Move to home.” | Host (laptop) or companion PC; arm connected via serial/ROS/socket. | Often local (Ollama) for real-time; cloud for planning only. | Tool or peripheral for arm API; safety limits in tool. |
+| **Service / delivery robot** | “Go to room 3”; “Announce arrival.” | On-board (Jetson, etc.) or gateway; kiosk/tablet for HRI. | Local preferred for responsiveness; cloud for complex Q&A. | Channel = kiosk or Telegram for operator; tool for navigation/announce. |
+| **Fleet (many robots)** | Dispatch “Mission 1 to robot A”; pay per task (x402). | One ZeroClaw per site (gateway) or per robot (companion). | Mix: gateway can use cloud; each robot can use local for execution. | x402 for “pay per mission”; allowlist for operators. |
+
+**Local models on robots:** Use small models (e.g. Ollama with `llama3.2:1b`, `phi3`, `qwen2.5:0.5b`) on companion PCs with 2–4GB RAM; reserve larger models for ground station or cloud. See [1.19 Local models](#119-local-models-ollama-lm-studio-and-device-fit).
+
+### 1.19 Local models (Ollama, LM Studio, and device fit)
+
+When to use **local providers** (Ollama, LM Studio) and which model sizes fit which devices. ZeroClaw’s lean runtime (&lt;5MB) leaves most RAM for the model.
+
+| Provider | What it is | Typical host | Use when |
+|----------|------------|--------------|----------|
+| **Ollama** | Local inference server; pull models with `ollama pull <model>`. | Same machine as ZeroClaw or another machine on LAN (`api_url`). | Default for “no API key”; RPi 4/5, NUC, laptop; good for robots and edge. |
+| **LM Studio** | Local server with model loading UI; OpenAI-compatible local endpoint. | Same machine; often dev laptop. | Quick local testing; same binary can point to `lmstudio` provider. |
+
+| Device / RAM | Suggested model size | Example models (Ollama) | Notes |
+|---------------|---------------------|-------------------------|-------|
+| **RPi 4 (4GB)** | Tiny / small (0.5B–1B params) | `qwen2.5:0.5b`, `phi3:mini`, `llama3.2:1b` | ZeroClaw ~5MB; leave 1.5–2GB for model; rest for OS. |
+| **RPi 5 (8GB)** | Small / medium (1B–3B) | `llama3.2:3b`, `phi3`, `qwen2.5:3b` | Can run 3B comfortably with Ollama. |
+| **NUC / laptop (16GB+)** | Medium / large (7B–8B) | `llama3.2`, `mistral`, `qwen2.5:7b` | Full chat and tool use; good for ground station or dev. |
+| **Jetson (4–8GB)** | Tiny / small | Same as RPi 4/5 | GPU can run small models with Ollama or vendor stack; ZeroClaw as client. |
+| **No local inference** | — | Use cloud provider (OpenRouter, Anthropic, etc.) | ZeroClaw on device; LLM in cloud; good when device has no RAM for model. |
+
+**Config:** `default_provider = "ollama"`, `default_model = "llama3.2:1b"` (or your choice). For Ollama on another host: set `api_url` in provider config. No API key needed for local Ollama unless you use Ollama Cloud.
+
+### 1.20 Current integrations summary (from registry)
+
+ZeroClaw’s integration registry (`zeroclaw integrations info <name>`) lists **70+ integrations** in 9 categories. Status: **Available** (implemented, not configured), **Active** (configured), **ComingSoon** (planned).
+
+#### Chat (14)
+
+| Integration | Status | Notes |
+|-------------|--------|------|
+| Telegram, Discord, Slack, Webhooks, WhatsApp, Signal, iMessage, Matrix, DingTalk, QQ Official, Email | Available / Active | Implemented; activate via config. |
+| Microsoft Teams, Nostr, WebChat, Nextcloud Talk, Zalo | ComingSoon | Planned. |
+
+#### AI models (28+)
+
+| Integration | Status | Notes |
+|-------------|--------|------|
+| OpenRouter, Anthropic, OpenAI, Google, DeepSeek, xAI, Mistral, Ollama, Perplexity, Venice, Vercel AI, Cloudflare AI, Moonshot, Synthetic, OpenCode Zen, Z.AI, GLM, MiniMax, Qwen, Amazon Bedrock, Qianfan, Groq, Together AI, Fireworks AI, Cohere, Copilot, NVIDIA | Available / Active | Implemented; many aliases. |
+| Hugging Face, LM Studio | ComingSoon (LM Studio has provider in code) | LM Studio provider exists; check `zeroclaw providers`. |
+
+#### Productivity (9)
+
+| Integration | Status | Notes |
+|-------------|--------|------|
+| GitHub, Notion, Apple Notes, Apple Reminders, Obsidian, Things 3, Bear Notes, Trello, Linear | ComingSoon | Composio can cover some via OAuth. |
+
+#### Music & audio (3)
+
+| Integration | Status | Notes |
+|-------------|--------|------|
+| Spotify, Sonos, Shazam | ComingSoon | |
+
+#### Smart home (3)
+
+| Integration | Status | Notes |
+|-------------|--------|------|
+| Home Assistant, Philips Hue, 8Sleep | ComingSoon | |
+
+#### Tools & automation (10+)
+
+| Integration | Status | Notes |
+|-------------|--------|------|
+| Shell, File System | Active | Core tools. |
+| Browser, Cron | Available | Implemented. |
+| Voice, Gmail, 1Password, Weather, Canvas | ComingSoon | |
+| Composio | Available (opt-in) | 1000+ OAuth apps. |
+
+#### Media & creative (4)
+
+| Integration | Status | Notes |
+|-------------|--------|------|
+| Image Gen, GIF Search, Screen Capture, Camera | ComingSoon | Screenshot tool exists. |
+
+#### Social (2)
+
+| Integration | Status | Notes |
+|-------------|--------|------|
+| Email | Available / Active | Channel. |
+| Twitter/X | ComingSoon | |
+
+#### Platform (5)
+
+| Integration | Status | Notes |
+|-------------|--------|------|
+| macOS, Linux | Active on that OS | |
+| Windows, iOS, Android | Available | Chat via other channels. |
+
+### 1.21 More integrations to add (outline)
+
+Suggested **new integrations** (channels, tools, providers) for hackathon or roadmap. Align with [playbooks](use-cases-and-hackathon-plan.md#3-quick-reference-where-to-build) and registry categories.
+
+#### Channels (trait: Channel)
+
+| Integration | Category | Rationale |
+|-------------|----------|-----------|
+| **Nostr** | Chat | Decentralized DMs; allowlist by pubkey; ComingSoon in registry. |
+| **Bluesky** | Chat | AT Protocol; same “chat to agent” pattern. |
+| **Microsoft Teams** | Chat | Enterprise; ComingSoon. |
+| **WebChat** | Chat | Browser UI; no app install; ComingSoon. |
+| **Nextcloud Talk** | Chat | Self-hosted; sovereignty. |
+| **SMS (Twilio / gateway)** | Chat | Field and low-tech; no smartphone required. |
+| **ROS 2 / robot topic** | Custom | Robot as “channel”: subscribe to command topic; publish responses. |
+
+#### Tools (trait: Tool)
+
+| Integration | Category | Rationale |
+|-------------|----------|-----------|
+| **Notion** | Productivity | Read/write pages; schema strict; many teams use it. |
+| **Linear / Jira** | Productivity | Issues and projects; runbook and triage. |
+| **Calendar (Google, Outlook)** | Productivity | Schedule and reminders. |
+| **Home Assistant** | Smart home | Call HA services; ComingSoon; tool for lights/locks. |
+| **Weather** | Tools | Forecasts; ComingSoon. |
+| **x402 HTTP client** | Tools / payments | Pay 402 then retry; agentic payments. |
+| **Drone API (DJI, PX4, etc.)** | Tools / robotics | One tool per SDK; waypoints, takeoff, land. |
+| **Runbook runner** | Tools | Execute only approved steps from repo; audit log. |
+
+#### Providers (trait: Provider)
+
+| Integration | Rationale |
+|-------------|-----------|
+| **Hugging Face Inference** | Many models; serverless or dedicated; ComingSoon. |
+| **LM Studio** | Local; OpenAI-compatible; already in provider list; ensure in registry. |
+| **More local (llama.cpp server, etc.)** | OpenAI-compatible local endpoints; `custom:http://...`. |
+| **x402-paid provider** | Provider that pays per request via x402 then calls LLM. |
+
+#### Peripherals / hardware
+
+| Integration | Rationale |
+|-------------|-----------|
+| **Raspberry Pi Pico W** | Peripheral or future micro agent; WiFi. |
+| **ESP32 (edge-native)** | ZeroClaw on device; future. |
+| **Jetson (as host)** | Same binary; GPU for local model; robot companion. |
+| **Home Assistant (as peripheral?)** | Or tool that calls HA; bridge to smart home. |
+
+**How to add:** Implement the trait; register in factory (see section 3); add to integration registry in `src/integrations/registry.rs`; update reference docs (providers-reference, channels-reference) and optionally `zeroclaw integrations`.
+
+### 1.22 Competitive Snapshot (Agent Runtimes)
 
 High-level comparison for **positioning and content** (benchmarks are from project docs; verify locally).
 
@@ -514,7 +678,7 @@ High-level comparison for **positioning and content** (benchmarks are from proje
 
 **Why choose ZeroClaw:** Smallest footprint; fastest cold start; no runtime dependency; hardware and migration story; trait-driven and hackathon-friendly; secure-by-default (pairing, tunnel, allowlists).
 
-### 1.19 Taglines and Messaging by Audience
+### 1.23 Taglines and Messaging by Audience
 
 Short **one-liners and taglines** for different audiences (for web, slides, and social).
 
@@ -530,7 +694,7 @@ Short **one-liners and taglines** for different audiences (for web, slides, and 
 
 **Universal:** “Zero overhead. Zero compromise. Deploy anywhere. Swap anything.”
 
-### 1.20 Partnership / Integration Checklist
+### 1.24 Partnership / Integration Checklist
 
 What a **hardware vendor, SaaS, or ecosystem partner** typically needs to recommend or integrate ZeroClaw (use as a conversation guide or one-pager).
 
@@ -551,7 +715,7 @@ What a **hardware vendor, SaaS, or ecosystem partner** typically needs to recomm
 
 **Partner pitch:** “ZeroClaw is an open-source, Rust-based agent runtime that runs on your hardware with minimal footprint, supports your preferred channels and models, and can control peripherals — we can document or preload it on our devices.”
 
-### 1.21 What’s Next (Narrative Roadmap)
+### 1.25 What’s Next (Narrative Roadmap)
 
 Forward-looking **narrative** for content and community (not a committed roadmap; “could” and “future” only).
 
@@ -568,7 +732,7 @@ Forward-looking **narrative** for content and community (not a committed roadmap
 
 **Messaging:** “We’re building toward edge-native, more channels, and agentic payments — today you get a lean, swappable runtime that already runs on VPS, local, and device.”
 
-### 1.22 Quick Wins (First 24 Hours and First Week)
+### 1.26 Quick Wins (First 24 Hours and First Week)
 
 **First 24 hours** — minimal path to “it works”:
 
@@ -593,7 +757,7 @@ Forward-looking **narrative** for content and community (not a committed roadmap
 
 **Narrative:** “From zero to first message in under an hour; from first message to multi-channel or hardware in a week.”
 
-### 1.23 Glossary (Terms Used in This Doc)
+### 1.27 Glossary (Terms Used in This Doc)
 
 | Term | Meaning |
 |------|---------|
@@ -610,7 +774,7 @@ Forward-looking **narrative** for content and community (not a committed roadmap
 | **Pairing** | One-time code exchange for gateway; clients get bearer token to call `/webhook`. |
 | **Trait** | Rust interface; ZeroClaw extends by implementing traits (Provider, Channel, Tool, Peripheral) and registering in factories. |
 
-### 1.24 Legal tech use cases
+### 1.28 Legal tech use cases
 
 Outline of **legal tech use cases** across firms, legal aid, courts, compliance, and correctional settings — and how an agent runtime like ZeroClaw could fit. Not legal advice; deployment depends on policy, procurement, and regulation.
 
@@ -641,7 +805,7 @@ Outline of **legal tech use cases** across firms, legal aid, courts, compliance,
 
 **Disclaimer:** Use in any legal or correctional setting depends on facility/organization policy, contracts, and applicable law. This section is a use-case and design outline only.
 
-### 1.25 More use cases (expanded)
+### 1.29 More use cases (expanded)
 
 Additional **use case ideas** beyond the main verticals — for content, hackathon prompts, and product exploration.
 
@@ -658,7 +822,7 @@ Additional **use case ideas** beyond the main verticals — for content, hackath
 | **Retail / e-commerce** | Internal: catalog Q&A, policy lookup, refund logic; no customer-facing advice without review. | Allowlist; RAG over catalog and policies; tool for order system if approved. |
 | **Energy / utilities** | Outage triage, procedure lookup, internal reporting; secure and auditable. | On-prem; audit trail; RAG over procedures; optional integration with SCADA/ticketing (tool). |
 
-### 1.26 Idea board
+### 1.30 Idea board
 
 Running **idea board** for use cases, features, hackathon prompts, and content. Use for prioritization, hackathon bounties, or “what to build next.”
 
@@ -697,7 +861,23 @@ Running **idea board** for use cases, features, hackathon prompts, and content. 
 - **“From zero to DePIN node”:** Tutorial: deploy ZeroClaw on a VPS or RPi; channel for control; optional x402.
 - **Comparison table (updated):** ZeroClaw vs OpenClaw vs NanoBot vs PicoClaw; link to reproducible benchmark commands.
 
-**How to use the idea board:** Pick an idea for a hackathon track, bounty, or roadmap; move to “in progress” in your own tracker; when built, add a short “done” note or link to PR/doc here (or in a separate backlog).
+#### More use case ideas (expanded)
+
+- **SMB helpdesk bot:** Internal Slack/Teams bot; RAG over internal KB and runbooks; allowlist = support team; audit for compliance.
+- **Local government FAQ:** RAG over public ordinances and FAQs; web or SMS channel; multilingual; accessibility.
+- **Research synthesis agent:** RAG over papers (PDFs in workspace); cite sources; no web; for labs and systematic review.
+- **Contract redline summarizer:** Tool that reads doc, returns summary of changes; workspace-only; for legal/compliance (no advice).
+- **Fleet status dashboard (read-only):** Tool that calls a status API (ships, drones, vehicles); agent answers “where is X?”; optional x402 per query.
+
+#### More hackathon / bounty ideas (expanded)
+
+- **“Bluesky channel”:** New Channel for Bluesky DMs or posts; allowlist by handle; document in channels-reference.
+- **“Best first issue” bounty:** Curate 3–5 labeled “good first issue” or “hackathon”; prize for first merged PR from each.
+- **“Multilingual runbook”:** Same runbook (e.g. ZeroClaw on RPi) in EN + one of ZH/JA/RU; linked from SUMMARY; parity with main doc.
+- **“Observability in a weekend”:** Prometheus or OTel Observer; non-sensitive metrics only; doc for operators.
+- **“Security hardening”:** One concrete improvement (rate limit, audit log, or pairing UX); threat note and rollback in PR.
+
+**How to use the idea board:** Pick an idea for a hackathon track, bounty, or roadmap; move to “in progress” in your own tracker; when built, add a short “done” note or link to PR/doc here (or in a separate backlog). Use the [hackathon content kit](hackathon-content/README.md) for judges, sponsors, and builder-segment outreach.
 
 ---
 
@@ -1016,6 +1196,111 @@ Best,
 - Don’t promise specific participant numbers unless you have a track record.
 - Don’t commit to placing sponsor content inside the ZeroClaw codebase or docs unless maintainers agree.
 - Keep sponsor messaging neutral (no implied endorsement of a token or product beyond “sponsor of this event”).
+
+### 2.19 Top AI communities to reach out to
+
+Communities where **hackathon announcements, ZeroClaw demos, and contributor outreach** can get traction. Verify links and rules before posting; many prefer “no spam” and value genuine participation.
+
+#### Discord
+
+| Community | Focus | Why reach out | How |
+|------------|--------|----------------|----------------|
+| **LMSYS** | LLM research, Chatbot Arena, model comparison | Agent runtimes and evaluation; “run on edge” and lean footprint. | Share hackathon or “ZeroClaw vs heavy runtimes” benchmark in relevant channel; follow server rules. |
+| **LangChain** | LLM apps, chains, prompt engineering | ZeroClaw as alternative/supplement; tools and RAG; zeroclaw-tools (LangGraph) fits. | Dev/announcements channel; position as “lean runtime + your stack” or hackathon for tool/channel. |
+| **LlamaIndex** | RAG, data indexing, retrieval | Memory and RAG use cases; legal, docs, knowledge bases. | RAG and use-case channels; “ZeroClaw RAG without external vector DB” angle. |
+| **Perplexity AI** | Search and conversational AI | Discovery and research use cases; agents that cite. | Per community rules; share use cases or tutorials, not pure promo. |
+| **DigitalOcean** | Cloud, dev, AI office hours | Hackathon credits; “deploy ZeroClaw on Droplet” tutorial; developer audience. | AI or community channels; sponsor ask (credits) + content. |
+| **Learn AI Together** | Learning, Towards AI partnership | Onboarding new contributors; hackathon for first-time builders. | Share hackathon + “beginner-friendly tracks” (docs, skills). |
+| **Rust / Rustlang** | Rust language and ecosystem | ZeroClaw is Rust; systems and embedded audience. | `#show-and-tell` or events; “Rust agent runtime on $10 hardware” + hackathon link. |
+| **OpenClaw** (if public) | OpenClaw users | Migration and “same identity, smaller stack” story; hackathon for migration docs. | Announce hackathon; “OpenClaw → ZeroClaw” track or doc bounty. |
+
+#### Reddit
+
+| Subreddit | Focus | Post type |
+|-----------|--------|-----------|
+| **r/LocalLLaMA** | Local models, Ollama, edge inference | “Agent runtime that runs with Ollama on RPi” + hackathon; benchmark. |
+| **r/selfhosted** | Self-hosted apps and infra | ZeroClaw as self-hosted agent; one-click deploy; no SaaS. |
+| **r/raspberry_pi** | RPi projects | “AI assistant on Pi” tutorial or hackathon hardware track. |
+| **r/rust** | Rust projects | Show-and-tell; “Rust agent runtime” + hackathon. |
+| **r/artificial**, **r/MachineLearning** | General AI / ML | Use “Ask” or “Discussion” for benchmarks and hackathon; follow sub rules (no low-effort promo). |
+
+#### Other platforms
+
+| Platform | Where | How |
+|----------|--------|-----|
+| **Hugging Face** | Forums, model/dataset pages | Discuss “agent runtime for edge”; link to repo; hackathon for HF-compatible tool or dataset. |
+| **GitHub Discussions** | zeroclaw-labs/zeroclaw | Pin hackathon announcement; “Ideas” category for track suggestions. |
+| **Twitter / X** | #AI, #Rust, #BuildInPublic, #Hackathon | Short thread: what ZeroClaw is, hackathon dates, tracks, link; tag sponsors or partners if agreed. |
+| **LinkedIn** | AI, open source, dev groups | Professional audience; “Lean agent runtime hackathon” + sponsor/partner mention. |
+| **Dev.to / Hashnode** | Dev blogs | “How we run an AI hackathon” or “ZeroClaw in 15 min” post with hackathon CTA. |
+
+#### Outreach tips
+
+- **Add value first:** Share a tutorial, benchmark, or use case before asking people to join or sponsor.
+- **One clear CTA:** “Join the hackathon,” “Try the 15-min setup,” or “Contribute a channel” — not all at once.
+- **Respect rules:** No DMs or mass outreach where forbidden; use official “promo” or “events” channels when they exist.
+- **Recurring:** Build presence (e.g. weekly office hours, or “project of the week”) so hackathon isn’t a one-off drop.
+
+### 2.20 Improved hackathon ideas (refined prompts and angles)
+
+Tighter **hackathon prompts**, judging angles, and variations so tracks stay clear and submissions are easier to score.
+
+#### Track prompts (copy-paste ready)
+
+| Track | Prompt (short) | Success = |
+|-------|------------------|-----------|
+| **New Channel** | “Implement a Channel for [Bluesky / Nostr / Teams / Keybase]. Register in the factory; add allowlist and health check; document in channels-reference. Demo: send a message and get a reply.” | Mergeable PR; `zeroclaw channel start` works; doc updated. |
+| **New Tool** | “Add a Tool that [calls Notion API / reads Airtable / triggers a calendar event]. Strict JSON schema; validate inputs; return ToolResult. No secrets in logs.” | Tool in default_tools or full_tools; tests; reference in docs. |
+| **New Provider** | “Add a Provider for [API X] or a RouterProvider that [fallback / cost-routes]. Register in factory; handle errors; update providers-reference.” | `zeroclaw agent --provider <id>` works; catalog or doc updated. |
+| **New Peripheral** | “Implement Peripheral for [Pico W / ESP32-CAM / board X]. At least one tool (e.g. GPIO); document in hardware-peripherals style; optional flash/introspect.” | Board in config; tool works; doc or PR description. |
+| **Skill Pack** | “Publish a skill: TOML + SKILL.md for [legal aid / devops / grant-writing]. Install path clear; one concrete task the skill improves.” | `zeroclaw skills install` works; README and one demo. |
+| **x402** | “Implement a tool or provider that pays for (or charges for) an API using HTTP 402. Demo with one paid endpoint.” | 402 flow works; no hardcoded keys; short doc. |
+| **Docs / DX** | “Write a tutorial or runbook: [ZeroClaw on RPi in 15 min / Matrix E2EE / Custom provider in 10 min]. Linked from SUMMARY; commands tested.” | Doc in repo; link in SUMMARY; reproducible. |
+
+#### Judging angles (what to emphasize)
+
+- **Channel:** Correct trait; auth and allowlist; no open relay; tests for connect/send.
+- **Tool:** Schema strict; errors handled; no escape from workspace; ToolResult shape.
+- **Provider:** Factory and config; error paths; no secret leakage; provider reference updated.
+- **Peripheral:** Safe protocol; doc for board; flash or introspect if claimed.
+- **Skill:** Usable without code change; install path; one clear use case.
+- **x402:** Protocol respected; facilitator or wallet flow; demo with real or test endpoint.
+- **Docs:** Reproducible; links valid; fits docs governance (SUMMARY, no duplicate nav).
+
+#### Prize ideas (beyond “Best in track”)
+
+- **Smallest binary / lowest RAM:** Measure with `ls -lh` and `time -l`; certificate or small credit.
+- **Best first PR:** For first-time contributors; merge + thank-you highlight.
+- **Community pick:** Participants vote (e.g. 1 vote per team); shortlist of 3–5.
+- **Most mergeable:** PR that needs fewest follow-up changes; judge or maintainer vote.
+- **Best demo video:** Clear problem → solution → 2 min; shareable on social or blog.
+
+#### Themed mini-tracks (optional)
+
+- **“Legal tech”:** Skill pack or RAG + one channel for legal aid / forms; disclaimer required.
+- **“Agentic payments”:** x402 tool or provider; demo pay-per-call or pay-per-task.
+- **“Edge in 48h”:** Deploy ZeroClaw on RPi or VPS; document steps; optional hardware (GPIO/serial).
+- **“Migration”:** Doc or script that makes OpenClaw → ZeroClaw easier; or a “migration runbook” PR.
+
+#### Improving the hackathon over time
+
+- **Post-event survey:** What worked (tracks, schedule, office hours); what to add or drop.
+- **Publish winners and links:** Blog or release notes with project names, links, and 1–2 sentence description.
+- **Maintain idea board:** Move “done” ideas to a “Shipped” list with PR/doc link; refresh [1.26 Idea board](#126-idea-board) with new ideas from submissions.
+- **Reuse copy:** Save announcement, reminders, and judge packet as templates for the next event; iterate on clarity and length.
+
+### 2.21 Hackathon content kit (folder)
+
+All **outreach and segment content** lives in **[docs/hackathon-content/](hackathon-content/README.md)**:
+
+| Doc | For | Contents |
+|-----|-----|----------|
+| [judges-outreach.md](hackathon-content/judges-outreach.md) | Judges | What judges do; who to recruit; timeline; email templates (recruit + onboarding). |
+| [sponsors-outreach.md](hackathon-content/sponsors-outreach.md) | Sponsors | One-pager; first-touch and prize/community email templates; tiers at a glance; what not to promise. |
+| [builder-segments.md](hackathon-content/builder-segments.md) | Builders (by segment) | Rust, makers, AI/LLM, legal tech, crypto, students, SRE, OpenClaw; where they hang out; message hook per segment. |
+| [personas.md](hackathon-content/personas.md) | Personas | Rust Ruth, Maker Max, AI Alex, Legal Leigh, Crypto Sam, Student Sam, Ops Jordan, OpenClaw Omar; goals, pain points, hooks, suggested tracks. |
+
+Use the folder when recruiting judges and sponsors, and when tailoring announcements and track promos to different builder segments.
 
 ---
 

@@ -61,6 +61,11 @@ Last reviewed: **February 18, 2026**.
 | `docs/datasheets/arduino-uno.md` | Current Hardware Reference | hardware builders |
 | `docs/datasheets/esp32.md` | Current Hardware Reference | hardware builders |
 | `docs/use-cases-and-hackathon-plan.md` | Current Guide (use cases + event plan) | organizers, contributors, participants |
+| `docs/hackathon-content/README.md` | Current Guide (content kit index) | organizers |
+| `docs/hackathon-content/judges-outreach.md` | Current Guide (judge recruitment) | organizers |
+| `docs/hackathon-content/sponsors-outreach.md` | Current Guide (sponsor one-pager and email) | organizers |
+| `docs/hackathon-content/builder-segments.md` | Current Guide (builder segments and channels) | organizers |
+| `docs/hackathon-content/personas.md` | Current Guide (builder personas) | organizers |
 
 ## Policy / Process Docs
 
