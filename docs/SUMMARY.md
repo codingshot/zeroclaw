@@ -75,4 +75,5 @@ Last refreshed: **February 18, 2026**.
 
 - [project/README.md](project/README.md)
 - [project-triage-snapshot-2026-02-18.md](project-triage-snapshot-2026-02-18.md)
+- [use-cases-and-hackathon-plan.md](use-cases-and-hackathon-plan.md)
 - [docs-inventory.md](docs-inventory.md)

@@ -60,6 +60,7 @@ Last reviewed: **February 18, 2026**.
 | `docs/datasheets/nucleo-f401re.md` | Current Hardware Reference | hardware builders |
 | `docs/datasheets/arduino-uno.md` | Current Hardware Reference | hardware builders |
 | `docs/datasheets/esp32.md` | Current Hardware Reference | hardware builders |
+| `docs/use-cases-and-hackathon-plan.md` | Current Guide (use cases + event plan) | organizers, contributors, participants |
 
 ## Policy / Process Docs
 
