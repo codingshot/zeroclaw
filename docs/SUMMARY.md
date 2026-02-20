@@ -77,4 +77,5 @@ Last refreshed: **February 18, 2026**.
 - [project-triage-snapshot-2026-02-18.md](project-triage-snapshot-2026-02-18.md)
 - [use-cases-and-hackathon-plan.md](use-cases-and-hackathon-plan.md)
 - [hackathon-content/README.md](hackathon-content/README.md) — outreach and content for judges, sponsors, builder segments, personas
+- [marketing/README.md](marketing/README.md) — marketing, content, viral outreach (OpenClaw playbook, pain points, enterprise, health, IoT, integrations)
 - [docs-inventory.md](docs-inventory.md)

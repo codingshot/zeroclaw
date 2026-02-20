@@ -39,7 +39,9 @@
       {"@type": "Question", "name": "What is the main difference between ZeroClaw and OpenClaw?", "acceptedAnswer": {"@type": "Answer", "text": "ZeroClaw is written in Rust and uses under 5MB RAM with under 10ms startup time. OpenClaw is written in TypeScript and requires over 1GB RAM with over 500 seconds startup on 0.8GHz edge hardware. ZeroClaw targets edge and embedded; OpenClaw targets desktop and server."}},
       {"@type": "Question", "name": "Which is faster: ZeroClaw or OpenClaw?", "acceptedAnswer": {"@type": "Answer", "text": "ZeroClaw is significantly faster. ZeroClaw starts in under 10 milliseconds; OpenClaw takes over 500 seconds on the same 0.8GHz hardware. ZeroClaw also uses under 5MB RAM versus OpenClaw's over 1GB."}},
       {"@type": "Question", "name": "When should I choose OpenClaw over ZeroClaw?", "acceptedAnswer": {"@type": "Answer", "text": "Choose OpenClaw if you need a TypeScript/Node.js ecosystem, run on a Mac Mini or similar desktop hardware with ample RAM, and prefer JavaScript tooling. Choose ZeroClaw for edge, IoT, Raspberry Pi, or resource-constrained environments."}},
-      {"@type": "Question", "name": "What is the binary size of ZeroClaw vs OpenClaw?", "acceptedAnswer": {"@type": "Answer", "text": "ZeroClaw produces a roughly 3.4MB binary. OpenClaw is around 28MB. ZeroClaw is about 8x smaller."}}
+      {"@type": "Question", "name": "What is the binary size of ZeroClaw vs OpenClaw?", "acceptedAnswer": {"@type": "Answer", "text": "ZeroClaw produces a roughly 3.4MB binary. OpenClaw is around 28MB. ZeroClaw is about 8x smaller."}},
+      {"@type": "Question", "name": "Is ZeroClaw more secure than OpenClaw?", "acceptedAnswer": {"@type": "Answer", "text": "ZeroClaw is built secure by default: pairing codes, sandboxed tools, allowlists, encrypted secret store. OpenClaw has had credential leaks (plaintext API keys), malicious skills in its marketplace, and no built-in sandbox. ZeroClaw has no skill marketplace — extend via reviewed traits."}},
+      {"@type": "Question", "name": "Can ZeroClaw run on Raspberry Pi?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. ZeroClaw runs on Pi Zero 2, Pi 4 (including 1GB), and Pi 5. OpenClaw requires Pi 4 4GB minimum and Pi 5 8GB for real usability; Pi Zero crashes, Pi 3B+ is painfully slow."}}
     ]
   }
   </script>
@@ -102,6 +104,17 @@
       </section>
 
       <section style="margin-top: 2rem;">
+        <h2>Why developers switch to ZeroClaw</h2>
+        <p>Common OpenClaw pain points that ZeroClaw addresses:</p>
+        <ul class="contribute-list" style="list-style: disc; padding-left: 1.5rem;">
+          <li><strong>Security:</strong> ZeroClaw uses pairing, sandbox, and encrypted secrets by default. OpenClaw has had credential leaks (plaintext in ~/.clawdbot) and malicious skills in its marketplace.</li>
+          <li><strong>Raspberry Pi:</strong> OpenClaw needs Pi 4 4GB+ or Pi 5 8GB; Zero crashes, Pi 3B+ is painfully slow. ZeroClaw runs on Pi Zero 2, Pi 4 1GB, Pi 5.</li>
+          <li><strong>Enterprise:</strong> ZeroClaw is secure-by-default with audit logging. OpenClaw had 22% unauthorized enterprise deployments and lacks built-in sandboxing.</li>
+          <li><strong>Token costs:</strong> OpenClaw reloads full memory every run, burning tokens. ZeroClaw uses SQLite memory with hybrid merge; no redundant reloads.</li>
+        </ul>
+      </section>
+
+      <section style="margin-top: 2rem;">
         <h2>When to choose OpenClaw</h2>
         <ul class="contribute-list" style="list-style: disc; padding-left: 1.5rem;">
           <li>Desktop or server with ample RAM (Mac Mini, workstation)</li>
@@ -123,7 +136,13 @@
           <dd style="margin-bottom: 1rem;">Choose OpenClaw if you need a TypeScript/Node.js ecosystem, run on a Mac Mini or similar desktop hardware with ample RAM, and prefer JavaScript tooling. Choose ZeroClaw for edge, IoT, Raspberry Pi, or resource-constrained environments.</dd>
 
           <dt><strong>What is the binary size of ZeroClaw vs OpenClaw?</strong></dt>
-          <dd>ZeroClaw produces a roughly 3.4MB binary. OpenClaw is around 28MB. ZeroClaw is about 8x smaller.</dd>
+          <dd style="margin-bottom: 1rem;">ZeroClaw produces a roughly 3.4MB binary. OpenClaw is around 28MB. ZeroClaw is about 8x smaller.</dd>
+
+          <dt><strong>Is ZeroClaw more secure than OpenClaw?</strong></dt>
+          <dd style="margin-bottom: 1rem;">ZeroClaw is built secure by default: pairing codes, sandboxed tools, allowlists, encrypted secret store. OpenClaw has had credential leaks (plaintext API keys), malicious skills in its marketplace, and no built-in sandbox. ZeroClaw has no skill marketplace — extend via reviewed traits.</dd>
+
+          <dt><strong>Can ZeroClaw run on Raspberry Pi?</strong></dt>
+          <dd>Yes. ZeroClaw runs on Pi Zero 2, Pi 4 (including 1GB), and Pi 5. OpenClaw requires Pi 4 4GB minimum and Pi 5 8GB for real usability; Pi Zero crashes, Pi 3B+ is painfully slow.</dd>
         </dl>
       </section>
 

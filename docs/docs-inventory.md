@@ -66,6 +66,19 @@ Last reviewed: **February 18, 2026**.
 | `docs/hackathon-content/sponsors-outreach.md` | Current Guide (sponsor one-pager and email) | organizers |
 | `docs/hackathon-content/builder-segments.md` | Current Guide (builder segments and channels) | organizers |
 | `docs/hackathon-content/personas.md` | Current Guide (builder personas) | organizers |
+| `docs/marketing/README.md` | Current Guide (marketing content kit index) | organizers, contributors |
+| `docs/marketing/content-strategy.md` | Strategy (content pillars, cadence) | organizers, contributors |
+| `docs/marketing/robotics-angle.md` | Strategy (robotics positioning, channels) | organizers, contributors |
+| `docs/marketing/raspberry-pi-outreach.md` | Strategy (RPi communities, sellout events) | organizers, contributors |
+| `docs/marketing/reddit-outreach.md` | Strategy (Reddit playbook, templates) | organizers, contributors |
+| `docs/marketing/viral-tactics.md` | Strategy (shareable content, amplification) | organizers, contributors |
+| `docs/marketing/openclaw-viral-playbook.md` | Strategy (OpenClaw viral tactics applied to ZeroClaw) | organizers, contributors |
+| `docs/marketing/openclaw-pain-points.md` | Reference (OpenClaw pain points vs ZeroClaw advantages) | organizers, contributors |
+| `docs/marketing/openclaw-security-incidents.md` | Reference (OpenClaw security incidents, CVEs, nightmare angles) | organizers, contributors |
+| `docs/marketing/openclaw-viral-map.md` | Strategy (OpenClaw viral playbook → ZeroClaw mapping) | organizers, contributors |
+| `docs/marketing/enterprise-health-iot-playbook.md` | Strategy (enterprise, health, legal, IoT, wearables) | organizers, contributors |
+| `docs/marketing/developer-content.md` | Strategy (developer content, blog outlines, templates) | organizers, contributors |
+| `docs/marketing/integrations-content-playbook.md` | Strategy (per-integration marketing, content, video outlines, scripts) | organizers, contributors |
 
 ## Policy / Process Docs
 
