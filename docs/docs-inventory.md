@@ -79,6 +79,7 @@ Last reviewed: **February 18, 2026**.
 | `docs/marketing/enterprise-health-iot-playbook.md` | Strategy (enterprise, health, legal, IoT, wearables) | organizers, contributors |
 | `docs/marketing/developer-content.md` | Strategy (developer content, blog outlines, templates) | organizers, contributors |
 | `docs/marketing/integrations-content-playbook.md` | Strategy (per-integration marketing, content, video outlines, scripts) | organizers, contributors |
+| `docs/marketing/build-personas.md` | Reference (all build personas: goals, hooks, channels, content mapping) | organizers, contributors |
 
 ## Policy / Process Docs
 
