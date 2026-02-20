@@ -132,6 +132,71 @@ Last updated: **February 18, 2026**.
 | **Binary size as unit** | “ZeroClaw = 1.7 floppies” or “fits in 3.4 iMessages” | Relatable units |
 | **“What runs on a Pi Zero”** | Before: nothing. After: ZeroClaw. | Possibility expansion |
 
+### More viral ideas
+
+#### Community / cohort
+
+| Idea | Format | Why it could go viral |
+|------|--------|----------------------|
+| **“ZeroClaw cohort”** | 10 devs build in parallel; weekly check-in; ship together | Accountability; shared journey |
+| **“First 100”** | Early adopters get badge, featured in README | Exclusivity; FOMO |
+| **“Migrate together”** | OpenClaw users migrate on same day; shared thread | Community event; safety in numbers |
+| **“Office hours”** | Public AMA/stream; “ask us anything about ZeroClaw” | Accessibility; live engagement |
+
+#### Surprise / unexpected
+
+| Idea | Format | Why it could go viral |
+|------|--------|----------------------|
+| **“ZeroClaw in a Docker one-liner”** | `docker run zeroclaw` — minimal, surprising | Dev convenience; shareability |
+| **“Runs on a Nintendo Switch”** (if true) | Odd platform; curiosity | Explorer appeal; “wait, really?” |
+| **“Same binary: x86, ARM, RISC-V”** | One artifact, many arches | Portability flex |
+| **“No internet required”** | Ollama + ZeroClaw offline demo | Privacy/offline narrative |
+| **“Boots faster than your IDE”** | <10ms vs VS Code / JetBrains startup | Relatable comparison |
+
+#### Comparison / roast (playful)
+
+| Idea | Format | Why it could go viral |
+|------|--------|----------------------|
+| **“AI agent runtime tier list”** | S tier: ZeroClaw, etc.; invite debate | Gamification; opinions |
+| **“If AI agents were cars”** | ZeroClaw = Miata (small, fast); OpenClaw = Hummer | Analogies; shareability |
+| **“One line of code that breaks [competitor]”** | Playful, not mean; technical curiosity | Dev humor |
+| **“Build time: ZeroClaw vs [X]”** | `cargo build` vs npm install; side-by-side | Spec flex; real data |
+
+#### Creator / influencer
+
+| Idea | Format | Why it could go viral |
+|------|--------|----------------------|
+| **“Ship a Pi to a YouTuber”** | Send board + ZeroClaw; “build something” prompt | Organic review; reach |
+| **“Mystery box”** | Unboxing: RPi + ZeroClaw sticker + one-pager | Unboxing format; curiosity |
+| **“ZeroClaw in 60 seconds”** | TikTok/Reels/Shorts: install → chat in 60s | Short-form; scroll-stop |
+| **“I tried the $10 AI challenge”** | Creator attempts $10 board challenge; vlog | UGC; aspirational |
+| **“Weekend project: AI robot”** | Maker YouTuber builds robot brain with ZeroClaw | Tutorial; project format |
+
+#### Data / proof
+
+| Idea | Format | Why it could go viral |
+|------|--------|----------------------|
+| **“10,000 cold starts, 0 crashes”** | Stress test; share results | Reliability proof |
+| **“RAM over time”** | Graph: ZeroClaw flat at 5MB; others spike | Visual proof |
+| **“Startup time: every Pi model”** | Pi Zero 2, 3B+, 4, 5 — table | Hardware coverage |
+| **“Cost per 1M tokens”** | ZeroClaw + local Ollama vs cloud-only | Cost comparison |
+
+#### Nostalgia / retro
+
+| Idea | Format | Why it could go viral |
+|------|--------|----------------------|
+| **“AI on a Game Boy”** (if feasible) | Or C64, etc.; absurd retro | Nostalgia; curiosity |
+| **“Runs on hardware from 2012”** | Old RPi, old laptop | Longevity; accessibility |
+| **“Fits on a floppy”** | 3.4MB ≈ 2.4 floppies; retro unit | Generational humor |
+
+#### FOMO / scarcity (ethical)
+
+| Idea | Format | Why it could go viral |
+|------|--------|----------------------|
+| **“Limited: ZeroClaw merch for first 500 stars”** | Sticker, shirt; star to qualify | Milestone incentive |
+| **“Hackathon spots: 50”** | Capped signups; waitlist | Exclusivity |
+| **“Beta: x402 integration”** | Early access for contributors | Contributor reward |
+
 ---
 
 ## Quick picks (fastest to execute)
@@ -146,3 +211,9 @@ Last updated: **February 18, 2026**.
 | 6 | “First AI on [device]” leaderboard | Medium | Medium — explorer appeal |
 | 7 | “Why I switched” first-person post | Low | Medium — migration FOMO |
 | 8 | Evolution meme (lobster-style) | Low | Medium — meme format |
+
+---
+
+## Viral strategies by persona
+
+See [viral-strategies-by-persona.md](viral-strategies-by-persona.md) for per-persona tactics: Rust Ruth, Maker Max, AI Alex, Legal Leigh, Crypto Sam, Student Sam, Ops Jordan, OpenClaw Omar, Enterprise Evan, Health Hannah, Wearable Wade, Robotics Ray, Productivity Pete, Privacy Paige. Each persona has: best viral ideas, formats, channels, strategy, do/don't.

@@ -255,6 +255,12 @@ Last updated: **February 18, 2026**.
 
 ---
 
+## Viral strategies by persona
+
+See [viral-strategies-by-persona.md](viral-strategies-by-persona.md) for viral tactics tailored to each persona: best ideas, formats, channels, appeal strategy, do/don't.
+
+---
+
 ## Cross-Links
 
 - **Hackathon personas (source):** [hackathon-content/personas.md](../hackathon-content/personas.md)

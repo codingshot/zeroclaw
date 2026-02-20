@@ -24,6 +24,7 @@ Last updated: **February 18, 2026**.
 | Doc | Purpose |
 |-----|---------|
 | [build-personas.md](build-personas.md) | Every build persona: goals, pain points, hooks, channels, content mapping |
+| [viral-strategies-by-persona.md](viral-strategies-by-persona.md) | Viral tactics per persona: best ideas, formats, channels, do/don't |
 
 ### Vertical playbooks
 
@@ -44,7 +45,7 @@ Last updated: **February 18, 2026**.
 - **Developer content:** [developer-content.md](developer-content.md) — blog outlines, Reddit templates, one-liners.
 - **Per-integration videos:** [integrations-content-playbook.md](integrations-content-playbook.md) — marketing angle, content angle, video outline, script outline.
 - **Robotics / maker:** [robotics-angle.md](robotics-angle.md) + [raspberry-pi-outreach.md](raspberry-pi-outreach.md).
-- **Build personas:** [build-personas.md](build-personas.md) — 14 personas (Rust Ruth, Maker Max, AI Alex, Legal Leigh, etc.); goals, hooks, content mapping.
+- **Build personas:** [build-personas.md](build-personas.md) — 14 personas; goals, hooks, content mapping. **Viral by persona:** [viral-strategies-by-persona.md](viral-strategies-by-persona.md).
 - **Reddit:** [reddit-outreach.md](reddit-outreach.md) — subreddit tiers, templates, do/don't rules.
 
 ## Link from main docs

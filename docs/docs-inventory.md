@@ -80,6 +80,7 @@ Last reviewed: **February 18, 2026**.
 | `docs/marketing/developer-content.md` | Strategy (developer content, blog outlines, templates) | organizers, contributors |
 | `docs/marketing/integrations-content-playbook.md` | Strategy (per-integration marketing, content, video outlines, scripts) | organizers, contributors |
 | `docs/marketing/build-personas.md` | Reference (all build personas: goals, hooks, channels, content mapping) | organizers, contributors |
+| `docs/marketing/viral-strategies-by-persona.md` | Strategy (viral tactics per persona: ideas, formats, channels) | organizers, contributors |
 
 ## Policy / Process Docs
 
