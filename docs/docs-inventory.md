@@ -78,6 +78,7 @@ Last reviewed: **February 18, 2026**.
 | `docs/marketing/openclaw-pain-points.md` | Reference (OpenClaw pain points vs ZeroClaw advantages) | organizers, contributors |
 | `docs/marketing/openclaw-security-incidents.md` | Reference (OpenClaw security incidents, CVEs, nightmare angles) | organizers, contributors |
 | `docs/marketing/openclaw-viral-map.md` | Strategy (OpenClaw viral playbook → ZeroClaw mapping) | organizers, contributors |
+| `docs/marketing/agentic-marketing-landscape.md` | Strategy (GTM landscape: survives vs dies; agentic distribution predictions) | organizers, contributors |
 | `docs/marketing/enterprise-health-iot-playbook.md` | Strategy (enterprise, health, legal, IoT, wearables) | organizers, contributors |
 | `docs/marketing/developer-content.md` | Strategy (developer content, blog outlines, templates) | organizers, contributors |
 | `docs/marketing/integrations-content-playbook.md` | Strategy (per-integration marketing, content, video outlines, scripts) | organizers, contributors |

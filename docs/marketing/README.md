@@ -17,6 +17,7 @@ Last updated: **February 18, 2026**.
 | [openclaw-pain-points.md](openclaw-pain-points.md) | OpenClaw pain points vs ZeroClaw advantages; use in comparisons |
 | [openclaw-security-incidents.md](openclaw-security-incidents.md) | Security incidents, nightmare scenarios, CVEs; angles for ZeroClaw positioning |
 | [openclaw-viral-map.md](openclaw-viral-map.md) | Copy of OpenClaw viral playbook → ZeroClaw mapping (tactic-by-tactic) |
+| [agentic-marketing-landscape.md](agentic-marketing-landscape.md) | GTM landscape: what survives (CRMs, lead DBs, CDPs) vs what dies (outreach automation, creatives); agentic distribution predictions |
 | [developer-content.md](developer-content.md) | Developer-focused content, blog outlines, Reddit templates, expansion prompts |
 | [viral-tactics.md](viral-tactics.md) | Shareable content, loops, hooks, and amplification |
 | [integrations-content-playbook.md](integrations-content-playbook.md) | Per-integration marketing, content, developer video outlines & scripts |
@@ -51,6 +52,7 @@ Last updated: **February 18, 2026**.
 - **OpenClaw migration / comparison:** [openclaw-pain-points.md](openclaw-pain-points.md) + landing [compare/zeroclaw-vs-openclaw.html](../../landing/compare/zeroclaw-vs-openclaw.html).
 - **Security nightmare angles:** [openclaw-security-incidents.md](openclaw-security-incidents.md) — 135K exposed, 900 malicious skills, CVEs, ZeroClaw contrast.
 - **Viral playbook map:** [openclaw-viral-map.md](openclaw-viral-map.md) — OpenClaw tactic → ZeroClaw implementation (copy & map).
+- **Agentic GTM landscape:** [agentic-marketing-landscape.md](agentic-marketing-landscape.md) — what survives vs dies; MCP, ads in LLMs, agentic commerce, brand moat.
 - **Viral growth tactics:** [openclaw-viral-playbook.md](openclaw-viral-playbook.md) — always-on wedge, pairing, demo bot, GitHub-first.
 - **Enterprise / health / legal / IoT:** [enterprise-health-iot-playbook.md](enterprise-health-iot-playbook.md) — messaging, channels, content ideas.
 - **Developer content:** [developer-content.md](developer-content.md) — blog outlines, Reddit templates, one-liners.

@@ -45,6 +45,7 @@
     { "id": "c1", "category": "content", "title": "ZeroClaw in 15 min (video)", "summary": "Clone, onboard, first Telegram message, first hardware command.", "link": null },
     { "id": "c2", "category": "content", "title": "Legal tech without the lock-in", "summary": "Blog: legal use cases, RAG, audit, and why open runtime matters.", "link": null },
     { "id": "c3", "category": "content", "title": "From zero to DePIN node", "summary": "Tutorial: deploy ZeroClaw on VPS or RPi; channel for control; optional x402.", "link": null },
-    { "id": "c4", "category": "content", "title": "Comparison table (updated)", "summary": "ZeroClaw vs OpenClaw vs NanoBot vs PicoClaw; link to reproducible benchmark commands.", "link": null }
+    { "id": "c4", "category": "content", "title": "Comparison table (updated)", "summary": "ZeroClaw vs OpenClaw vs NanoBot vs PicoClaw; link to reproducible benchmark commands.", "link": null },
+    { "id": "c5", "category": "content", "title": "Agentic GTM landscape (blog)", "summary": "What survives (CRMs, lead DBs, CDPs) vs dies (outreach automation, creatives); MCP as App Store; ads in LLMs; agentic commerce; brand moat. Based on docs/marketing/agentic-marketing-landscape.md.", "link": "https://github.com/zeroclaw-labs/zeroclaw/blob/main/docs/marketing/agentic-marketing-landscape.md" }
   ]
 }
