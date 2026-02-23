@@ -120,6 +120,7 @@ Last updated: **February 18, 2026**.
 
 ## Cross-Links
 
+- [viral-tactics.md](viral-tactics.md) — OpenClaw angles + viral hooks (one-liners, meme-ready, debate bait)
 - [openclaw-viral-playbook.md](openclaw-viral-playbook.md) — full narrative and lessons
 - [openclaw-security-incidents.md](openclaw-security-incidents.md) — security angles and nightmare incidents
 - [openclaw-pain-points.md](openclaw-pain-points.md) — pain points vs ZeroClaw advantages

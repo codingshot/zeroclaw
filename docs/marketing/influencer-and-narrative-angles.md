@@ -33,6 +33,8 @@ Last updated: **February 18, 2026**.
 - “Agentic wallet + lightweight runtime = DePIN ready” — DePIN community
 - Demo: ZeroClaw calls paid API; 402 response; agent pays; retries with PAYMENT-SIGNATURE
 
+**Deep dive:** [x402-agents-paying-agents.md](x402-agents-paying-agents.md) — how ZeroClaw agents pay each other (agent-to-agent flow, use cases, technical outline).
+
 **Channels:** x402 Discord (Coinbase CDP), DePIN servers, crypto Twitter/X, Agentic Wallets / CDP docs
 
 **Do:** Align with protocol; technical depth; “first runtime that fits x402 on edge”  

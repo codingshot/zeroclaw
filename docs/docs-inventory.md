@@ -69,6 +69,7 @@ Last reviewed: **February 18, 2026**.
 | `docs/marketing/README.md` | Current Guide (marketing content kit index) | organizers, contributors |
 | `docs/marketing/content-strategy.md` | Strategy (content pillars, cadence) | organizers, contributors |
 | `docs/marketing/content-flows-and-devices.md` | Strategy (content flows per persona; device matrix) | organizers, contributors |
+| `docs/marketing/content-use-cases-and-angles.md` | Strategy (surveillance, enterprise, IoT; Meta/glasses killer; job-displacement angle) | organizers, contributors |
 | `docs/marketing/robotics-angle.md` | Strategy (robotics positioning, channels) | organizers, contributors |
 | `docs/marketing/raspberry-pi-outreach.md` | Strategy (RPi communities, sellout events) | organizers, contributors |
 | `docs/marketing/reddit-outreach.md` | Strategy (Reddit playbook, templates) | organizers, contributors |
@@ -83,6 +84,10 @@ Last reviewed: **February 18, 2026**.
 | `docs/marketing/build-personas.md` | Reference (all build personas: goals, hooks, channels, content mapping) | organizers, contributors |
 | `docs/marketing/viral-strategies-by-persona.md` | Strategy (viral tactics per persona: ideas, formats, channels) | organizers, contributors |
 | `docs/marketing/influencer-and-narrative-angles.md` | Strategy (Brian Armstrong + x402, medical device, device sellout, agents for marketing) | organizers, contributors |
+| `docs/marketing/x402-agents-paying-agents.md` | Strategy (ZeroClaw agents paying each other via x402; agent-to-agent micropayments) | organizers, contributors |
+| `docs/marketing/viral-tactics-money-making.md` | Strategy (viral tactics: making money, earning, monetization, side-hustle hooks) | organizers, contributors |
+| `docs/marketing/sensitive-data-use-cases.md` | Strategy (viral use cases: sensitive info — health, legal, financial, HR, identity) | organizers, contributors |
+| `docs/marketing/viral-opportunities-expanded.md` | Strategy (more viral opportunities: speedruns, calendar, platform-specific, memes, news jacking) | organizers, contributors |
 
 ## Policy / Process Docs
 

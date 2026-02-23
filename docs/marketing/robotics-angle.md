@@ -50,6 +50,7 @@ Last updated: **February 18, 2026**.
 
 ## Content Ideas
 
+- **Robots talking to each other:** Two (or more) ZeroClaw agents in a Telegram group — each on its own Pi/robot. They chat, coordinate, or debate. Viral hook: "Pov: your robots have a group chat." See [content-use-cases-and-angles.md](content-use-cases-and-angles.md) Section 18.
 - **Tutorial:** “ZeroClaw + Raspberry Pi: robot brain in 15 minutes.”
 - **Demo video:** Telegram → robot movement; show latency, setup.
 - **Comparison:** “ZeroClaw vs running a Python agent on RPi” (RAM, startup, binary).

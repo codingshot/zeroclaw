@@ -1,8 +1,12 @@
 # Viral Tactics — ZeroClaw
 
-Shareable content ideas, loops, and amplification. Optimized for Reddit, Twitter/X, and maker/robotics communities.
+Shareable content ideas, loops, amplification, and OpenClaw-derived angles/hooks. Optimized for Reddit, Twitter/X, and maker/robotics communities.
 
 Last updated: **February 18, 2026**.
+
+**Money-making tactics:** [viral-tactics-money-making.md](viral-tactics-money-making.md) — earning, monetization, side-hustle hooks.
+
+**More opportunities:** [viral-opportunities-expanded.md](viral-opportunities-expanded.md) — speedruns, calendar, platform-specific, memes, news jacking.
 
 ---
 
@@ -95,6 +99,9 @@ Last updated: **February 18, 2026**.
 | **SMS/paper backup** | “Your agent’s config fits on a single printed page” | Anti-digital flex |
 | **“World’s smallest footprint”** | Claim + reproducible benchmark; invite others to beat it | Spec flex; competition |
 | **Telegram → robot in 60s** | One-take video: open Telegram, send “move,” robot moves | Tangible, instant “whoa” |
+| **Robots talking to each other** | Two Pis, one Telegram group, two ZeroClaw agents chat or coordinate | Pov: your robots have a group chat |
+| **Robot debate** | Two agents argue about best Pi, best language; video | Meme format; dev humor |
+| **Fleet of brains** | 3+ robots, each with ZeroClaw, coordinating via MQTT or group chat | Swarm robotics flex |
 
 ### Loop / recurring
 
@@ -211,6 +218,152 @@ Last updated: **February 18, 2026**.
 | 6 | “First AI on [device]” leaderboard | Medium | Medium — explorer appeal |
 | 7 | “Why I switched” first-person post | Low | Medium — migration FOMO |
 | 8 | Evolution meme (lobster-style) | Low | Medium — meme format |
+
+---
+
+## OpenClaw Angles (Copy-Ready)
+
+Condensed from pain points, viral playbook, and security incidents. Use as source material for content and hooks.
+
+### Angle 1: Specs / Hardware
+
+| OpenClaw | ZeroClaw | Viral hook |
+|----------|----------|------------|
+| >1GB RAM, >500s startup, ~28MB binary | <5MB RAM, <10ms startup, ~3.4MB binary | "OpenClaw needs a Mac Mini. ZeroClaw needs a Pi Zero." |
+| Mac Mini $599; Pi Zero crashes | Any $10+ board; Pi Zero 2 viable | "From $599 to $10: the hardware democratization of AI" |
+| Pi 4 4GB min, Pi 5 8GB recommended | Pi 4 1GB, Pi 5 — all work | "1GB is enough. Really." |
+| Node.js runtime, TypeScript | Single binary, Rust | "No Node. No Python. One binary." |
+
+### Angle 2: Security
+
+| OpenClaw | ZeroClaw | Viral hook |
+|----------|----------|------------|
+| 900+ malicious skills (20% of ClawHub) | No marketplace; extend by trait | "900 malicious skills. ZeroClaw has zero." |
+| 135,000+ exposed instances | Localhost by default; tunnel for public | "135K exposed. ZeroClaw: zero by default." |
+| Plaintext API keys in ~/.clawdbot | Encrypted secret store | "Your API keys deserve better than a .env file." |
+| One-click RCE via malicious link | Pairing, deny-by-default bind | "One click = full control. Unless you built it right." |
+| 22% unauthorized enterprise deployments | Pairing, audit logs, discoverable | "Shadow AI cost $670K per breach. We built in governance." |
+
+### Angle 3: Memory / Tokens
+
+| OpenClaw | ZeroClaw | Viral hook |
+|----------|----------|------------|
+| Reloads full memory every run; burns tokens | SQLite; hybrid merge; no redundant reloads | "Token burn is a feature. Or a bug. You choose." |
+| No Pinecone, no Elasticsearch (they use it) | SQLite + FTS5; local, deterministic | "No Pinecone. No Elasticsearch. No problem." |
+| Discord/LLM integrations "nonsensical" in prod | 22+ providers; predictable memory | "Built for production, not demos." |
+
+### Angle 4: Enterprise / Regulated
+
+| OpenClaw | ZeroClaw | Viral hook |
+|----------|----------|------------|
+| Single-user; no multi-tenant | Trait-based RBAC, SecurityPolicy | "Enterprise-ready by design, not by patch." |
+| Meta, others restricted employee use | Self-hosted; your infra, your rules | "When big tech bans it, we run it ourselves." |
+| HIPAA = BAA + hope | BAA providers, encrypted storage, audit | "Health tech without the supply chain risk." |
+
+### Angle 5: Edge / Wearables / IoT
+
+| OpenClaw | ZeroClaw | Viral hook |
+|----------|----------|------------|
+| Too heavy for Pi Zero, wearables | <5MB RAM, <10ms = fits glasses, $10 boards | "AI on smart glasses. We're ready. Are they?" |
+| No path for embedded | Peripheral trait; STM32, ESP32, Arduino | "Your robot doesn't need a Mac Mini." |
+
+### Angle 6: Viral Playbook Tactics (What Worked for Them)
+
+| OpenClaw did | ZeroClaw equivalent | Viral hook |
+|--------------|---------------------|------------|
+| Always-on in chat; self-hosted = infra | Same; 99% smaller footprint | "24/7 agent. $10 hardware. Same promise." |
+| GitHub README = homepage | README-first; one command bootstrap | "The ad is a runnable thing." |
+| Pairing codes = security as shareability | Pairing + allowlist + sandbox from day one | "Secure by default. Pair once, share safely." |
+| Public demo bot; "hack it" | Demo + "try to break it" | "Break our bot. We dare you." |
+| Stars = ad units; benchmark as proof | 3.4MB vs 28MB; RAM, startup chart | "One image = instant significance." |
+
+---
+
+## Viral Hooks (OpenClaw-Derived)
+
+Hooks you can drop into posts, threads, and content. Pick by angle.
+
+### One-liners (drop-in)
+
+- "OpenClaw needed a Mac Mini. ZeroClaw needs a Pi Zero."
+- "900 malicious skills. ZeroClaw has zero."
+- "135,000 exposed. ZeroClaw: zero by default."
+- "3.4MB vs 28MB. You do the math."
+- "Boot faster than your IDE. Seriously."
+- "No Pinecone. No Elasticsearch. No Node.js. No problem."
+- "When automation cost $600, only some could afford it. Now $10."
+- "The runtime that fits in a tweet."
+- "Built secure from day one. No skill marketplace. No one-click RCE."
+- "Your API keys deserve better than plaintext."
+
+### Provocative (use with care)
+
+- "OpenClaw automated the rich. ZeroClaw automates everyone."
+- "One click gave them full control. We don't have that button."
+- "22% of enterprises had unauthorized AI. We built governance in."
+- "Meta restricted it. We self-host it."
+- "Token burn isn't a bug. It's a business model. We chose neither."
+
+### Meme-ready
+
+- "Pov: your AI runtime fits in 3.4 megabytes"
+- "OpenClaw: *needs Mac Mini* | ZeroClaw: *vibes on Pi Zero*"
+- "135K instances exposed vs 0 by default — we are not the same"
+- "Skill marketplace: 900 malicious | Trait system: 0 malicious"
+- "500 second startup vs 10 millisecond — this is fine / this is fine"
+
+### Debate bait
+
+- "Rust vs TypeScript for AI agents: a 3.4MB argument"
+- "You don't need 1GB for an AI agent. Prove me wrong."
+- "Node.js is bloat for agents. Hot take or fact?"
+- "What if the 'lightweight alternative' was actually lightweight?"
+
+### Story hooks
+
+- "First AI assistant I could actually run on my Pi"
+- "Tried everything. This one started in 10ms."
+- "My grandma could run this. One command."
+- "From $599 to $10: how I stopped waiting for hardware"
+
+### Visual / screenshot hooks
+
+- Side-by-side: `ls -lh` ZeroClaw vs OpenClaw binary
+- Split-screen GIF: ZeroClaw starts in 10ms; OpenClaw still loading at 500s
+- Bar chart: 5MB vs 1GB RAM
+- "ZeroClaw status" output on Pi Zero 2
+
+### Calendar / moment hooks
+
+- Pi Day: "AI on Pi Day. Because we can."
+- OpenClaw CVE: "Another one. We built differently."
+- Mac Mini sold out: "Meanwhile, ZeroClaw runs on $10 boards."
+- New Pi launch: "First to run ZeroClaw on Pi 6 gets featured."
+
+### Use-case-specific hooks
+
+- **Education:** "AI in every lab station. One Pi. One binary." / "Tutoring bot that never leaves campus."
+- **Government:** "City hall bot — transparent, auditable." / "Gov AI without the cloud."
+- **Media:** "Schedule from your Pi — no SaaS." / "Podcast agent — no upload, no leak."
+- **Logistics:** "Dock agent — status before the cloud." / "Fleet agent — cellular edge."
+- **Hospitality:** "Hotel bot — your data, your lobby." / "Open house bot — 4 hours, $10."
+- **Research:** "Lit review agent — IRB-friendly." / "Field agent — no connectivity required."
+- **Accessibility:** "Assistive AI — fast, private." / "Comms agent — stays on device."
+- **Crisis:** "Crisis agent — when the grid is down." / "Shelter agent — runs on a hotspot."
+- **Developer:** "Dev agent — works on a plane." / "Docs agent — no Slack ping."
+- **Real estate:** "Open house bot — set up in 15 min." / "PM agent — one Pi per building."
+- **Food:** "Kitchen agent — order in, action out." / "Allergy agent — double-check, never advise."
+- **Fitness:** "Workout agent — on your wrist." / "Recovery agent — your data, your device."
+
+### Meta-narrative hooks
+
+- "AI for the rest of us."
+- "When the cloud can't reach."
+- "Every action, logged."
+- "Human in the loop."
+- "Extend by code, not by install."
+- "One Pi per X."
+- "Runs where power is scarce."
 
 ---
 
