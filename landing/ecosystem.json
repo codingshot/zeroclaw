@@ -1,3 +1,20 @@
 {
-  "items": []
+  "items": [
+    {
+      "id": "zerobuilder",
+      "name": "Zerobuilder",
+      "description": "Fork of ZeroClaw: build production-quality web apps through natural conversation on Telegram (and Signal). Describe what you want, the agent plans it, you confirm, and get a live preview link. E2B MicroVM sandboxes, plan-before-build workflow, GitHub OAuth deploy. Master Agent (ZeroClaw Rust) + Builder Agent (Node.js). Hook up Telegram/Signal to make changes and deploy ZeroClaw on VPS via GitHub.",
+      "status": "production",
+      "repo": "https://github.com/louisdevzz/zerobuilder",
+      "link": "https://github.com/louisdevzz/zerobuilder"
+    },
+    {
+      "id": "mobileclaw",
+      "name": "MobileClaw",
+      "description": "Open-source ZeroClaw for Android devices, including automotive. Fast, small, fully autonomous AI assistant infrastructure. Turns old Android phones into on-device control centers. Rust-first core, modular providers/channels/tools, 22+ providers, Telegram/Discord support. APK from GitHub Releases.",
+      "status": "production",
+      "repo": "https://github.com/Good-karma-lab/mobileclaw",
+      "link": "https://github.com/Good-karma-lab/mobileclaw"
+    }
+  ]
 }
