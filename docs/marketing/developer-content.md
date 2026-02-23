@@ -160,6 +160,7 @@ Use these to generate more content from existing docs.
 
 ## Cross-Links
 
+- [ai-devrel-strategy.md](ai-devrel-strategy.md) — YouTube scripts, tutorial pipeline, DevRel cadence
 - [openclaw-viral-playbook.md](openclaw-viral-playbook.md)
 - [openclaw-pain-points.md](openclaw-pain-points.md)
 - [enterprise-health-iot-playbook.md](enterprise-health-iot-playbook.md)

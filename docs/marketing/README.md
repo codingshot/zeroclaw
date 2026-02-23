@@ -32,6 +32,8 @@ Last updated: **February 18, 2026**.
 | [viral-tactics-money-making.md](viral-tactics-money-making.md) | Viral tactics: making money, earning, monetization, side-hustle hooks |
 | [sensitive-data-use-cases.md](sensitive-data-use-cases.md) | Viral use cases involving sensitive info (health, legal, financial, HR, identity); "when data can't touch the cloud" |
 | [viral-opportunities-expanded.md](viral-opportunities-expanded.md) | More viral opportunities: speedruns, calendar, platform-specific, memes, news jacking, collaborations |
+| [ai-devrel-strategy.md](ai-devrel-strategy.md) | AI DevRel strategy: YouTube scripts, tutorial pipeline, creator collabs, SEO |
+| [hosting-partnerships.md](hosting-partnerships.md) | Hosting partnerships for 1-click deploy: DigitalOcean, Railway, Coolify, outreach templates |
 
 ### Vertical playbooks
 
@@ -60,6 +62,8 @@ Last updated: **February 18, 2026**.
 - **Money-making viral tactics:** [viral-tactics-money-making.md](viral-tactics-money-making.md) — earning, monetization, side-hustle hooks.
 - **Sensitive-data use cases:** [sensitive-data-use-cases.md](sensitive-data-use-cases.md) — viral angles for health, legal, financial, HR, identity; "when data can't touch the cloud."
 - **More viral opportunities:** [viral-opportunities-expanded.md](viral-opportunities-expanded.md) — speedruns, calendar, platform-specific, memes, news jacking.
+- **AI DevRel strategy:** [ai-devrel-strategy.md](ai-devrel-strategy.md) — YouTube scripts, tutorial pipeline, creator collabs.
+- **Hosting partnerships:** [hosting-partnerships.md](hosting-partnerships.md) — 1-click deploy partners, outreach, content.
 - **Reddit:** [reddit-outreach.md](reddit-outreach.md) — subreddit tiers, templates, do/don't rules.
 
 ## Link from main docs

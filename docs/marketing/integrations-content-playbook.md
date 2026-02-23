@@ -4,6 +4,8 @@ Per-integration marketing angles, content outlines, and developer video scripts.
 
 Last updated: **February 18, 2026**.
 
+**DevRel strategy:** [ai-devrel-strategy.md](ai-devrel-strategy.md) — full YouTube scripts, tutorial pipeline, creator collabs.
+
 ---
 
 ## How to Use This Doc

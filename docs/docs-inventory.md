@@ -88,6 +88,8 @@ Last reviewed: **February 18, 2026**.
 | `docs/marketing/viral-tactics-money-making.md` | Strategy (viral tactics: making money, earning, monetization, side-hustle hooks) | organizers, contributors |
 | `docs/marketing/sensitive-data-use-cases.md` | Strategy (viral use cases: sensitive info — health, legal, financial, HR, identity) | organizers, contributors |
 | `docs/marketing/viral-opportunities-expanded.md` | Strategy (more viral opportunities: speedruns, calendar, platform-specific, memes, news jacking) | organizers, contributors |
+| `docs/marketing/ai-devrel-strategy.md` | Strategy (AI DevRel: YouTube scripts, tutorial pipeline, creator collabs) | organizers, contributors |
+| `docs/marketing/hosting-partnerships.md` | Strategy (hosting partnerships for 1-click deploy; outreach, content) | organizers, contributors |
 
 ## Policy / Process Docs
 
