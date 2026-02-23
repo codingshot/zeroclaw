@@ -68,6 +68,7 @@ Last reviewed: **February 18, 2026**.
 | `docs/hackathon-content/personas.md` | Current Guide (builder personas) | organizers |
 | `docs/marketing/README.md` | Current Guide (marketing content kit index) | organizers, contributors |
 | `docs/marketing/content-strategy.md` | Strategy (content pillars, cadence) | organizers, contributors |
+| `docs/marketing/content-flows-and-devices.md` | Strategy (content flows per persona; device matrix) | organizers, contributors |
 | `docs/marketing/robotics-angle.md` | Strategy (robotics positioning, channels) | organizers, contributors |
 | `docs/marketing/raspberry-pi-outreach.md` | Strategy (RPi communities, sellout events) | organizers, contributors |
 | `docs/marketing/reddit-outreach.md` | Strategy (Reddit playbook, templates) | organizers, contributors |
@@ -81,6 +82,7 @@ Last reviewed: **February 18, 2026**.
 | `docs/marketing/integrations-content-playbook.md` | Strategy (per-integration marketing, content, video outlines, scripts) | organizers, contributors |
 | `docs/marketing/build-personas.md` | Reference (all build personas: goals, hooks, channels, content mapping) | organizers, contributors |
 | `docs/marketing/viral-strategies-by-persona.md` | Strategy (viral tactics per persona: ideas, formats, channels) | organizers, contributors |
+| `docs/marketing/influencer-and-narrative-angles.md` | Strategy (Brian Armstrong + x402, medical device, device sellout, agents for marketing) | organizers, contributors |
 
 ## Policy / Process Docs
 

@@ -11,6 +11,7 @@ Last updated: **February 18, 2026**.
 | Doc | Purpose |
 |-----|---------|
 | [content-strategy.md](content-strategy.md) | Content pillars, cadence, SEO, and AI-search alignment |
+| [content-flows-and-devices.md](content-flows-and-devices.md) | Multi-step content flows per persona; device matrix (current, potential, contrast) |
 | [openclaw-viral-playbook.md](openclaw-viral-playbook.md) | How OpenClaw went viral; applied tactics for ZeroClaw |
 | [openclaw-pain-points.md](openclaw-pain-points.md) | OpenClaw pain points vs ZeroClaw advantages; use in comparisons |
 | [openclaw-security-incidents.md](openclaw-security-incidents.md) | Security incidents, nightmare scenarios, CVEs; angles for ZeroClaw positioning |
@@ -25,6 +26,7 @@ Last updated: **February 18, 2026**.
 |-----|---------|
 | [build-personas.md](build-personas.md) | Every build persona: goals, pain points, hooks, channels, content mapping |
 | [viral-strategies-by-persona.md](viral-strategies-by-persona.md) | Viral tactics per persona: best ideas, formats, channels, do/don't |
+| [influencer-and-narrative-angles.md](influencer-and-narrative-angles.md) | Brian Armstrong + x402, medical device (Bryan Johnson), device sellout/Mac Mini equivalent, agents for marketing |
 
 ### Vertical playbooks
 
@@ -37,6 +39,7 @@ Last updated: **February 18, 2026**.
 
 ## Quick use
 
+- **Content flows & devices:** [content-flows-and-devices.md](content-flows-and-devices.md) — persona flows, device matrix, content-by-device.
 - **OpenClaw migration / comparison:** [openclaw-pain-points.md](openclaw-pain-points.md) + landing [compare/zeroclaw-vs-openclaw.html](../../landing/compare/zeroclaw-vs-openclaw.html).
 - **Security nightmare angles:** [openclaw-security-incidents.md](openclaw-security-incidents.md) — 135K exposed, 900 malicious skills, CVEs, ZeroClaw contrast.
 - **Viral playbook map:** [openclaw-viral-map.md](openclaw-viral-map.md) — OpenClaw tactic → ZeroClaw implementation (copy & map).
@@ -46,6 +49,7 @@ Last updated: **February 18, 2026**.
 - **Per-integration videos:** [integrations-content-playbook.md](integrations-content-playbook.md) — marketing angle, content angle, video outline, script outline.
 - **Robotics / maker:** [robotics-angle.md](robotics-angle.md) + [raspberry-pi-outreach.md](raspberry-pi-outreach.md).
 - **Build personas:** [build-personas.md](build-personas.md) — 14 personas; goals, hooks, content mapping. **Viral by persona:** [viral-strategies-by-persona.md](viral-strategies-by-persona.md).
+- **Influencer/narrative angles:** [influencer-and-narrative-angles.md](influencer-and-narrative-angles.md) — Brian Armstrong + x402, medical device, device sellout craze, agents for marketing.
 - **Reddit:** [reddit-outreach.md](reddit-outreach.md) — subreddit tiers, templates, do/don't rules.
 
 ## Link from main docs
