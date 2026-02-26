@@ -16,6 +16,7 @@ Last updated: **February 18, 2026**.
 | **Plaintext creds** | API keys in ~/.clawdbot; .bak files harvestable; DataBridge CVE-2026-1847 bypassed sandbox for env vars; Moltbook 1.5M tokens exposed | Wiz, advisories |
 | **Enterprise shadow AI** | 22% unauthorized deployments; >50% privileged access; shadow AI +$670K breach cost; no IT visibility | Token Security, IBM |
 | **Vulnerability cluster** | 6+ CVEs (SSRF, path traversal, mDNS credential interception, token replay); opt-out security; broad trust | Endor Labs, advisories |
+| **Financial loss** | $16M crypto scam (rebrand hijack); $500k+ ClawHub stolen crypto; Moltbook 1.5M tokens; Bitget key resets; shadow AI +$670K breach cost | ClawdHost, aInvest, Wiz, IBM |
 
 ---
 
@@ -45,6 +46,7 @@ Last updated: **February 18, 2026**.
 - **For security-conscious:** "No plaintext API keys. No one-click RCE. No 135K exposed instances. ZeroClaw: secure by default."
 - **For IoT/edge:** "OpenClaw needs a Mac Mini. ZeroClaw runs on $10 boards. Same agent use case, 99% less surface area."
 - **For compliance:** "Encrypted secrets, audit trail, self-hosted. ZeroClaw fits HIPAA and regulated workflows."
+- **For crypto/trading:** "$16M scam, $500k+ stolen, Bitget key resets. ZeroClaw: no skill marketplace, no arbitrary installs."
 
 ---
 
