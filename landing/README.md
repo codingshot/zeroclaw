@@ -11,6 +11,7 @@ Performant, SEO-optimized landing page for ZeroClaw. Static HTML/CSS/JS — no b
 - **ideas.html** — Full ideas board: search by keyword, filter by category, single-idea view at `?id=<ideaId>`.
 - **ideas.js** — Loads ideas.json, handles search/filter and single-idea route for ideas.html.
 - **assets/logo.png** — ZeroClaw logo (armored crab, electric blue glow). Used in header and hero.
+- **brand.html** — Brand page: color scheme, typography, assets list, social links. Reference for marketing and partners.
 
 ## Links
 

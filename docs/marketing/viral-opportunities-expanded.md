@@ -189,7 +189,80 @@ Last updated: **February 18, 2026**.
 
 ---
 
-## 15. Repost Loops & Amplification
+## 15. Kickstarter & Crowdfunded Specialized Devices
+
+**Hook:** Hardware campaigns that run ZeroClaw — Kickstarter/Indiegoto/Crowd Supply projects for specialized IoT and edge devices. ZeroClaw as the AI brain = visibility in maker/crowdfunding communities, proven use cases, ecosystem proof.
+
+### Device Ideas (Kickstarter-Ready)
+
+| Device type | Use case | ZeroClaw role | Viral hook |
+|-------------|----------|---------------|------------|
+| **Smart home gateway** | Voice + Telegram control of lights, sensors, cameras | Agent on Pi; local inference or cloud; Home Assistant bridge | "Your smart home has a brain. $99." |
+| **Agri / livestock monitor** | Sensors + agent; alert on anomaly; LoRa/WiFi | ZeroClaw on Pi or gateway; RAG over runbooks | "AI that watches your farm. No cloud required." |
+| **Drone companion computer** | Mission planning, telemetry, payload control | ZeroClaw on companion Pi; tools for DJI/PX4 APIs | "Give your drone a copilot." |
+| **Industrial edge gateway** | Modbus, OPC-UA, predictive alerts | ZeroClaw on DIN-rail Pi; tool for protocols | "AI on the factory floor. $10 board, enterprise-grade." |
+| **Wearable AI pendant / badge** | Voice in, TTS out; personal assistant; offline-first | ZeroClaw on lightweight SBC; <5MB fits | "AI around your neck. Your data, your device." |
+| **Cold chain monitor** | Temp, humidity; compliance logs; alert on breach | ZeroClaw + sensors; local audit trail | "Cold chain agent — proof on device for audits." |
+| **Classroom lab kit** | Pi + ZeroClaw + one peripheral; students chat to control | Pre-configured image; "AI in 15 min" | "AI lab in a box for $50." |
+| **Retail / inventory beacon** | Foot traffic, stock; local analytics; no cloud | ZeroClaw on Pi or ESP32 gateway | "Store agent — local only." |
+| **DePIN node appliance** | Pre-flashed ZeroClaw + x402; plug-and-earn | "Node brain" — pay per task | "DePIN node in a box. ZeroClaw + x402." |
+| **Accessibility comms device** | AAC, real-time; stays on device; E2E | ZeroClaw + voice; local inference | "Comms agent — no upload, ever." |
+
+### Content Angles for Campaigns
+
+| Angle | Format |
+|-------|--------|
+| **"First ZeroClaw Kickstarter"** | Seed narrative: "Hardware projects are building on ZeroClaw" |
+| **"We're backing [project]"** | ZeroClaw team backs campaign; tweet, newsletter |
+| **Ecosystem spotlight** | Add funded projects to ecosystem page; "Built with ZeroClaw" |
+| **"Why ZeroClaw for hardware"** | Guest post from campaign creator; their decision log |
+| **Campaign launch thread** | "X just launched a [device] that runs ZeroClaw. Here's why." |
+| **Stretch goal: ZeroClaw integration** | Campaign offers "ZeroClaw pre-installed" as stretch goal |
+| **"From prototype to Kickstarter"** | Build log: how they used ZeroClaw in dev → ship |
+
+### Viral Hooks
+
+| Hook | When |
+|------|------|
+| **"Sold out in 48 hours"** | Campaign hits goal fast; tie to ZeroClaw appeal |
+| **"Funded 10x"** | Overfunded; "Edge AI is hot" narrative |
+| **"First [category] with ZeroClaw"** | Category creation — e.g. "first agri AI gateway" |
+| **"Open source from day one"** | Campaign ships schematics + ZeroClaw config; maker cred |
+| **"Pi Zero inside"** | "$15 board, AI inside" — democratization angle |
+| **"No cloud. No subscription."** | One-time purchase; ZeroClaw enables it |
+
+### Partnership Model
+
+- **ZeroClaw:** Offer ecosystem page feature, tweet, newsletter mention for projects that (a) run ZeroClaw, (b) are in building or production, (c) add to ecosystem.json.
+- **Campaign creators:** Use "Powered by ZeroClaw" / "Built with ZeroClaw" in campaign; link to zeroclaw.dev; get visibility in maker/crypto/IoT communities.
+- **Do:** Be genuine; only feature projects that actually use ZeroClaw.
+- **Don't:** Promise endorsement; claim we "partner" without clear scope; feature vaporware.
+
+### Channels
+
+| Channel | Use |
+|---------|-----|
+| **Kickstarter / Indiegogo** | Campaign pages; "Powered by ZeroClaw" badge |
+| **r/raspberry_pi, r/arduino** | Campaign launch posts (by creator); we amplify |
+| **Hackaday** | Campaign coverage; "ZeroClaw inside" |
+| **Crowd Supply** | OSHW-friendly campaigns; ZeroClaw fits |
+| **Maker YouTubers** | Campaign backers / reviewers; unboxing with ZeroClaw |
+| **IoT / IIoT newsletters** | "New hardware: ZeroClaw-powered [device]" |
+| **Crypto / DePIN** | If device has x402; "DePIN appliance" |
+
+### Quick Add to Content Calendar
+
+| Priority | Idea | Effort | Impact |
+|----------|------|--------|--------|
+| 1 | Create "Kickstarter-ready" one-pager for hardware makers | Low | High — enables campaigns |
+| 2 | Add "Powered by ZeroClaw" badge asset | Low | Medium — campaign use |
+| 3 | Ecosystem page: "Hardware" or "Devices" filter | Medium | High — discoverability |
+| 4 | Reach out to 2–3 maker/hardware creators re: ZeroClaw campaign | Medium | High if converts |
+| 5 | "Device ideas for your Kickstarter" blog | Medium | Medium — thought leadership |
+
+---
+
+## 16. Repost Loops & Amplification
 
 | Tactic | How |
 |--------|-----|
@@ -213,6 +286,8 @@ Last updated: **February 18, 2026**.
 | 6 | Meme template (Drake, POV) | Low | Medium — shareable |
 | 7 | News jacking playbook | Low | High when news hits |
 | 8 | Poll: guess binary size | Low | Low — quick engagement |
+| 9 | Kickstarter one-pager + badge for hardware makers | Low | High — enables campaigns |
+| 10 | "Device ideas for your Kickstarter" blog | Medium | Medium — thought leadership |
 
 ---
 
@@ -222,3 +297,6 @@ Last updated: **February 18, 2026**.
 - [viral-tactics-money-making.md](viral-tactics-money-making.md) — earning angles
 - [sensitive-data-use-cases.md](sensitive-data-use-cases.md) — privacy/sensitive hooks
 - [content-use-cases-and-angles.md](content-use-cases-and-angles.md) — use case matrix
+- [influencer-and-narrative-angles.md](influencer-and-narrative-angles.md) — device sellout / Mac Mini equivalent
+- [raspberry-pi-outreach.md](raspberry-pi-outreach.md) — Pi communities, sellout events
+- [content-flows-and-devices.md](content-flows-and-devices.md) — device matrix, IoT flows

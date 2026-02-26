@@ -76,16 +76,21 @@ Last reviewed: **February 18, 2026**.
 | `docs/marketing/viral-tactics.md` | Strategy (shareable content, amplification) | organizers, contributors |
 | `docs/marketing/openclaw-viral-playbook.md` | Strategy (OpenClaw viral tactics applied to ZeroClaw) | organizers, contributors |
 | `docs/marketing/openclaw-pain-points.md` | Reference (OpenClaw pain points vs ZeroClaw advantages) | organizers, contributors |
+| `docs/marketing/claude-trust-enterprise-narrative.md` | Strategy (why not to trust Claude; trust failures; ZeroClaw as alternative) | organizers, contributors |
 | `docs/marketing/openclaw-security-incidents.md` | Reference (OpenClaw security incidents, CVEs, nightmare angles) | organizers, contributors |
+| `docs/marketing/partner-pitch-security-brief.md` | Reference (partner pitch brief: incidents, ZeroClaw contrast, elevator pitch, content ideas) | organizers, partners |
 | `docs/marketing/openclaw-viral-map.md` | Strategy (OpenClaw viral playbook → ZeroClaw mapping) | organizers, contributors |
 | `docs/marketing/agentic-marketing-landscape.md` | Strategy (GTM landscape: survives vs dies; agentic distribution predictions) | organizers, contributors |
 | `docs/marketing/enterprise-health-iot-playbook.md` | Strategy (enterprise, health, legal, IoT, wearables) | organizers, contributors |
 | `docs/marketing/developer-content.md` | Strategy (developer content, blog outlines, templates) | organizers, contributors |
+| `docs/marketing/rust-rise-narrative.md` | Strategy (marketing case for Rust; rise of Rust; content angles) | organizers, contributors |
 | `docs/marketing/integrations-content-playbook.md` | Strategy (per-integration marketing, content, video outlines, scripts) | organizers, contributors |
 | `docs/marketing/build-personas.md` | Reference (all build personas: goals, hooks, channels, content mapping) | organizers, contributors |
 | `docs/marketing/viral-strategies-by-persona.md` | Strategy (viral tactics per persona: ideas, formats, channels) | organizers, contributors |
 | `docs/marketing/influencer-and-narrative-angles.md` | Strategy (Brian Armstrong + x402, medical device, device sellout, agents for marketing) | organizers, contributors |
 | `docs/marketing/x402-agents-paying-agents.md` | Strategy (ZeroClaw agents paying each other via x402; agent-to-agent micropayments) | organizers, contributors |
+| `docs/marketing/crypto-community-outreach-dms.md` | Strategy (DM templates: Circle, Base, x402, DePIN, Superteam, Solana, wallet builders) | organizers, contributors |
+| `docs/marketing/ai-hub-outreach.md` | Strategy (outreach for global AI hubs and communities: SF, NYC, London, Paris, Tokyo, etc.; experiment with ZeroClaw) | organizers, contributors |
 | `docs/marketing/viral-tactics-money-making.md` | Strategy (viral tactics: making money, earning, monetization, side-hustle hooks) | organizers, contributors |
 | `docs/marketing/sensitive-data-use-cases.md` | Strategy (viral use cases: sensitive info — health, legal, financial, HR, identity) | organizers, contributors |
 | `docs/marketing/viral-opportunities-expanded.md` | Strategy (more viral opportunities: speedruns, calendar, platform-specific, memes, news jacking) | organizers, contributors |

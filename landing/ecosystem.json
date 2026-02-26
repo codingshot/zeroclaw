@@ -1,9 +1,25 @@
 {
   "items": [
     {
+      "id": "zeroone",
+      "name": "ZeroOne",
+      "description": "Managed platform for creating and deploying AI agents via dashboard, no DevOps required. Multi-channel and multi-model. One-click deployment, custom agent identity/persona/memory, visual dashboard, live status monitoring. Each agent runs in a separate Docker container, completely isolated from the main server.",
+      "status": "production",
+      "repo": "https://github.com/PotLock/zeroone",
+      "link": "https://www.zeroonec.xyz"
+    },
+    {
+      "id": "zeromarket",
+      "name": "ZeroMarket",
+      "description": "WASM skill registry for ZeroClaw — browse, install, and publish WebAssembly tool packages for agents. One-click install via zeroclaw skill install namespace/skill-name. Multi-language support (Rust, TypeScript, Go, Python). Visual registry with search, filter, and drag-and-drop publish. Each skill runs in WASM sandbox, isolated from the host.",
+      "status": "production",
+      "repo": "https://github.com/louisdevzz/zeromarket",
+      "link": "https://zeromarket.vercel.app"
+    },
+    {
       "id": "zerobuilder",
-      "name": "Zerobuilder",
-      "description": "Fork of ZeroClaw: build production-quality web apps through natural conversation on Telegram (and Signal). Describe what you want, the agent plans it, you confirm, and get a live preview link. E2B MicroVM sandboxes, plan-before-build workflow, GitHub OAuth deploy. Master Agent (ZeroClaw Rust) + Builder Agent (Node.js). Hook up Telegram/Signal to make changes and deploy ZeroClaw on VPS via GitHub.",
+      "name": "ZeroBuilder",
+      "description": "Telegram-native web application builder — build production-quality web apps through natural chat, no setup required. Plan-before-build workflow: agent proposes a structured plan, waits for confirmation, then builds. E2B MicroVM sandboxes, live preview URL, GitHub OAuth deploy. Master Agent (ZeroClaw Rust) + Builder Agent (Node.js, E2B).",
       "status": "production",
       "repo": "https://github.com/louisdevzz/zerobuilder",
       "link": "https://github.com/louisdevzz/zerobuilder"
@@ -15,6 +31,13 @@
       "status": "production",
       "repo": "https://github.com/Good-karma-lab/mobileclaw",
       "link": "https://github.com/Good-karma-lab/mobileclaw"
+    },
+    {
+      "id": "moreaura",
+      "name": "MoreAura.ai",
+      "description": "Aura connects your email, calendar, and pipeline — then handles the busywork so you can operate.",
+      "status": "production",
+      "link": "https://moreaura.ai/"
     }
   ]
 }

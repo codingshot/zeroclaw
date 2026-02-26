@@ -152,6 +152,26 @@ OpenClaw’s rapid growth coincided with severe security fallout: 135,000+ expos
 2. **“Secure AI Agents: Defaults That Don’t Bite”** — Bind, secrets, sandbox, no marketplace. Position as architecture lesson.
 3. **“Enterprise Shadow AI: Discover, Govern, Replace”** — How to inventory; policy; ZeroClaw as governed option.
 4. **“From CVE to Design: Why ZeroClaw Has No Skill Marketplace”** — Trade-off: extensibility vs supply-chain risk.
+5. **“135K Exposed to Zero: How ZeroClaw's Defaults Avoid the Trap”** — Bind, tunnel, localhost; contrast piece.
+6. **“ClawHavoc, Atomic Stealer, AuthTool: The Skill Supply-Chain Problem”** — Deep dive on malicious skill campaigns.
+7. **“Plaintext Credentials: Why We Encrypt Secrets at Rest”** — DataBridge, Moltbook; ZeroClaw secret store.
+8. **“One-Click RCE: CVE-2026-25253 and Why Pairing Matters”** — Token exfil vector; ZeroClaw pairing flow.
+9. **“The 22% Problem: Enterprise Shadow AI and Governance”** — Token Security, IBM; discoverable agents.
+10. **“Rust vs TypeScript: Memory Safety in Agent Runtimes”** — Broader angle; segfaults, data races, supply chain.
+
+### Additional Content Ideas (by Format)
+
+| Format | Idea |
+|--------|------|
+| **One-pager** | “OpenClaw Security Incidents — Partner Handout” (incidents + ZeroClaw contrast) |
+| **Fact sheet** | “ZeroClaw Security Model” — pairing, sandbox, secrets, bind, no marketplace |
+| **Checklist** | “Enterprise AI Agent Security Checklist” — what to look for; ZeroClaw vs OpenClaw |
+| **X thread** | “10 ways ZeroClaw avoids the OpenClaw security trap” |
+| **LinkedIn** | “22% of enterprises had unauthorized AI. Here's what we built instead.” |
+| **Reddit** | “Switching from OpenClaw — security comparison” (r/devops, r/selfhosted) |
+| **Video** | “ZeroClaw security model in 5 min” — pairing, allowlist, encrypted secrets |
+| **Video** | “Break the bot” — public sandbox demo; trust signal |
+| **Case study** | “From 135K exposed to governed agents” — hypothetical migration narrative |
 
 ---
 
@@ -184,3 +204,9 @@ OpenClaw’s rapid growth coincided with severe security fallout: 135,000+ expos
 - VirusTotal: 3,016+ skills analysed, hundreds malicious
 - IBM: AI breach cost, governance gap
 - Palo Alto Unit 42: “Lethal trifecta” (data + untrusted content + external comms)
+
+---
+
+## Partner Pitch
+
+See [partner-pitch-security-brief.md](partner-pitch-security-brief.md) for a concise brief to pitch partners: incidents summary, ZeroClaw contrast, elevator pitch, content ideas, conversation flow.

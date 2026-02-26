@@ -150,6 +150,7 @@ Last updated: **February 18, 2026**.
 | **Where** | r/devops, r/sysadmin, SRE Slack, enterprise CTO newsletters |
 | **Don’t** | Promise “enterprise support” without clarifying self-hosted model |
 | **Content angle** | “Enterprise security model”; “multi-tenant pattern”; SOC 2 / RBAC |
+| **Claude/trust narrative** | See [claude-trust-enterprise-narrative.md](claude-trust-enterprise-narrative.md) — “why not to trust Claude; ZeroClaw as alternative” |
 
 ---
 
@@ -266,5 +267,7 @@ See [viral-strategies-by-persona.md](viral-strategies-by-persona.md) for viral t
 - **Hackathon personas (source):** [hackathon-content/personas.md](../hackathon-content/personas.md)
 - **Builder segments (channels):** [hackathon-content/builder-segments.md](../hackathon-content/builder-segments.md)
 - **Enterprise/health/IoT:** [enterprise-health-iot-playbook.md](enterprise-health-iot-playbook.md)
+- **Claude/trust/enterprise:** [claude-trust-enterprise-narrative.md](claude-trust-enterprise-narrative.md)
+- **Rust marketing case:** [rust-rise-narrative.md](rust-rise-narrative.md)
 - **Developer content:** [developer-content.md](developer-content.md)
 - **Integrations:** [integrations-content-playbook.md](integrations-content-playbook.md)
