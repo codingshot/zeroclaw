@@ -34,6 +34,7 @@ Last updated: **February 18, 2026**.
 | [influencer-and-narrative-angles.md](influencer-and-narrative-angles.md) | Brian Armstrong + x402, medical device (Bryan Johnson), device sellout/Mac Mini equivalent, agents for marketing |
 | [x402-agents-paying-agents.md](x402-agents-paying-agents.md) | How ZeroClaw agents pay each other with x402; agent-to-agent micropayments |
 | [crypto-community-outreach-dms.md](crypto-community-outreach-dms.md) | DM templates for Circle Alliance, Base Batches, x402, DePIN, Superteam, Solana, wallet builders; x402 contributor recruitment |
+| [crypto-founders-narrative.md](crypto-founders-narrative.md) | ZeroClaw founders/contributors decade+ in crypto; OpenClaw founder bans crypto; crypto builder onboarding content outline |
 | [ai-hub-outreach.md](ai-hub-outreach.md) | Outreach for global AI hubs: SF, NYC, Boston, London, Paris, Tokyo, Seoul, Singapore, Bangalore; LangChain, Hugging Face |
 | [viral-tactics-money-making.md](viral-tactics-money-making.md) | Viral tactics: making money, earning, monetization, side-hustle hooks |
 | [sensitive-data-use-cases.md](sensitive-data-use-cases.md) | Viral use cases involving sensitive info (health, legal, financial, HR, identity); "when data can't touch the cloud" |
@@ -70,6 +71,7 @@ Last updated: **February 18, 2026**.
 - **Influencer/narrative angles:** [influencer-and-narrative-angles.md](influencer-and-narrative-angles.md) — Brian Armstrong + x402, medical device, device sellout craze, agents for marketing.
 - **x402 agents paying agents:** [x402-agents-paying-agents.md](x402-agents-paying-agents.md) — agent-to-agent micropayments, use cases, technical flow.
 - **Crypto community outreach DMs:** [crypto-community-outreach-dms.md](crypto-community-outreach-dms.md) — Circle Alliance, Base Batches, x402, DePIN, Superteam, Solana, wallet devs; contributor recruitment.
+- **Crypto founders narrative:** [crypto-founders-narrative.md](crypto-founders-narrative.md) — ZeroClaw team decade+ in crypto; OpenClaw bans crypto; crypto builder onboarding outline.
 - **AI hub outreach:** [ai-hub-outreach.md](ai-hub-outreach.md) — global AI communities (SF, NYC, Boston, London, Paris, Tokyo, Seoul, Singapore, Bangalore); LangChain, Hugging Face; experiment with ZeroClaw.
 - **Money-making viral tactics:** [viral-tactics-money-making.md](viral-tactics-money-making.md) — earning, monetization, side-hustle hooks.
 - **Sensitive-data use cases:** [sensitive-data-use-cases.md](sensitive-data-use-cases.md) — viral angles for health, legal, financial, HR, identity; "when data can't touch the cloud."

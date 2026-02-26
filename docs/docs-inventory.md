@@ -90,6 +90,7 @@ Last reviewed: **February 18, 2026**.
 | `docs/marketing/influencer-and-narrative-angles.md` | Strategy (Brian Armstrong + x402, medical device, device sellout, agents for marketing) | organizers, contributors |
 | `docs/marketing/x402-agents-paying-agents.md` | Strategy (ZeroClaw agents paying each other via x402; agent-to-agent micropayments) | organizers, contributors |
 | `docs/marketing/crypto-community-outreach-dms.md` | Strategy (DM templates: Circle, Base, x402, DePIN, Superteam, Solana, wallet builders) | organizers, contributors |
+| `docs/marketing/crypto-founders-narrative.md` | Strategy (ZeroClaw founders/contributors decade+ crypto; OpenClaw bans crypto; crypto builder onboarding) | organizers, partners |
 | `docs/marketing/ai-hub-outreach.md` | Strategy (outreach for global AI hubs and communities: SF, NYC, London, Paris, Tokyo, etc.; experiment with ZeroClaw) | organizers, contributors |
 | `docs/marketing/viral-tactics-money-making.md` | Strategy (viral tactics: making money, earning, monetization, side-hustle hooks) | organizers, contributors |
 | `docs/marketing/sensitive-data-use-cases.md` | Strategy (viral use cases: sensitive info — health, legal, financial, HR, identity) | organizers, contributors |
